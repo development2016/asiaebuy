@@ -1,0 +1,26 @@
+.ahref-for-shop {
+	text-decoration:none;
+	color:#999;
+	font-weight: 600;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+}
+
+.ahref-for-shop-index {
+	text-decoration:none;
+	color: #999;
+	letter-spacing: .05em;
+}
+.show-search-info {
+
+	position: absolute;
+    left: 15px;
+    right: 15px;
+    border-top: solid #ccc 1px;
+	z-index: 100;
+}
+
+.more {
+	color: #525252;
+	text-align: right;
+}
