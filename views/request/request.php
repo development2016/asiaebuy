@@ -75,7 +75,7 @@ $(document).ready(function(){
         });
 
 
-
+ $(".div-request-pulsate").pulsate({color:"#bf1c56"});
 
 
 
@@ -238,34 +238,84 @@ $this->registerJs($script);
                                                 <tr>
                                                     <td><?php echo $value2['seller'] ?></td>
                                                     <td><?php echo $value['buyer']; ?></td>
-                                                    <td><?php echo $value2['status']; ?></td>
+
+                                                        <?php if ($value2['approver'] == 'level') { ?>
+
+                                                        <td>
+                                                            <ul>
+                                                            <?php foreach ($value2['approval'] as $key => $app) { ?>
+                                                                <li>
+                                                                <?= $app['approval']; ?>
+
+                                                                <?php if ($app['status'] == 'Waiting Approval') { ?>
+
+                                                                    : <label class="div-request-pulsate">Waiting To Approve</label>
+
+                                                                <?php } elseif ($app['status'] == 'Approve') { ?>
+
+                                                                    : <label class="label bg-green-jungle font-dark"><?= $app['status']; ?></label>
+                                                                    
+                                                                <?php } else { ?>
+
+                                                                <?php } ?>
+
+
+
+                                                                </li>
+                                                                <br>
+                                                            <?php } ?>
+                                                            </ul>
+                                                        </td>
+
+
+
+                                                        <?php } else { ?>
+
+                                                            <td>
+                                                                <?php if ($value2['status'] == 'Approve') { ?>
+                                                                
+                                                                    <label class="label bg-green-jungle font-dark"><?php echo $value2['status']; ?></label>
+
+                                                                <?php } else { ?>
+
+                                                                     <?php echo $value2['status']; ?>
+ 
+                                                                <?php } ?>
+
+                                                           </td>
+
+
+                                                        <?php } ?>
+
                                                     <td>
 
                                                         <?php if ($value2['status'] == 'Approve') { ?>
 
                                                             <?php if ($value['type_of_project'] == 'Guide Buying') { ?>
 
-                                                                <div class="margin-bottom-5">
+                                                                    <div class="margin-bottom-5">
 
-                                                                        <div class="btn-group">
-                                                                            <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Purchase Requisition
-                                                                                <i class="fa fa-angle-down"></i>
-                                                                            </a>
-                                                                            <ul class="dropdown-menu">
-                                                                  
-                                                                                <li>
-                                                                                    <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/guide-purchase-requisition-html',
-                                                                                        'project'=>(string)$value['_id'],
-                                                                                        'seller'=>$value2['seller'],
-                                                                                        'buyer' => $value['buyer']
-                                                                                        ],['target'=>'_blank']) ?>
-                                                                                </li>
+                                                                            <div class="btn-group">
+                                                                                <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Purchase Requisition
+                                                                                    <i class="fa fa-angle-down"></i>
+                                                                                </a>
+                                                                                <ul class="dropdown-menu">
+                                                                      
+                                                                                    <li>
+                                                                                        <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/guide-purchase-requisition-html',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer' => $value['buyer']
+                                                                                            ],['target'=>'_blank']) ?>
+                                                                                    </li>
 
-                                      
-                                                                            </ul>
-                                                                        </div>
+                                          
+                                                                                </ul>
+                                                                            </div>
 
-                                                                </div>
+                                                                    </div>
+
+
 
                                                             <?php } elseif ($value['type_of_project'] == 'Sale Lead') { ?>
 
@@ -278,17 +328,42 @@ $this->registerJs($script);
 
 
 
+
                                                         <?php } else { ?>
 
                                                             <?php if ($value['type_of_project'] == 'Guide Buying') { ?>
 
-                                                                <div class="margin-bottom-5">
-                                                                    <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
-                                                                    'project'=>(string)$value['_id'],
-                                                                    'seller'=>$value2['seller'],
-                                                                    'buyer' => $value['buyer']
-                                                                    ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
-                                                                </div>
+
+                                                            <?php if ($value2['approver'] == 'level') { ?>
+
+                                                                <?php if ($user->account_name == $value2['approver_level']) { ?>
+                                                                    
+                                                                        <div class="margin-bottom-5">
+                                                                            <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
+                                                                            'project'=>(string)$value['_id'],
+                                                                            'seller'=>$value2['seller'],
+                                                                            'buyer' => $value['buyer'],
+                                                                            'approver' => $value2['approver'],
+                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                        </div>
+
+                                                                <?php } else { ?>
+
+                                                                <?php } ?>
+
+                                                            <?php } else { ?>
+
+
+                                                                        <div class="margin-bottom-5">
+                                                                            <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
+                                                                            'project'=>(string)$value['_id'],
+                                                                            'seller'=>$value2['seller'],
+                                                                            'buyer' => $value['buyer'],
+                                                                            'approver' => $value2['approver'],
+                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                        </div>
+
+                                                            <?php } ?>
 
 
                                                             <?php } elseif ($value['type_of_project'] == 'Sale Lead') { ?>

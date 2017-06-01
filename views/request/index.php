@@ -82,7 +82,7 @@ $(document).ready(function(){
 
     });
 
-
+ $(".div-request-pulsate").pulsate({color:"#bf1c56"});
 
 }); 
 JS;
@@ -235,38 +235,78 @@ $this->registerJs($script);
                                             <table class="table table-bordered " >
                                                 <tr style="background-color: #ecf6ff;">
                                                     <th class="uppercase">Seller Name</th>
-                                                    <th class="uppercase">Approval</th>
-                                                    <th class="uppercase">Status</th>
+                                                    <?php if ($value2['approver'] == 'level') { ?>
+
+                                                         <th class="uppercase">Approval / Status</th>
+                                                        
+                                                    <?php } else { ?>
+
+                                                        <th class="uppercase">Approval</th>
+                                                        <th class="uppercase">Status</th>
+
+                                                    <?php } ?>
                                                     <th class="uppercase">Action</th>
                                                 </tr>
                                                 <?php foreach ($value['sellers'] as $key => $value2) { ?>
                                                 <tr>
                                                     <td><?php echo $value2['seller'] ?></td>
-                                                    <td>
-                                                    <ul>
-                                                    <?php foreach ($value2['approval'] as $key => $app) { ?>
 
-                                                        <li><?= $app['approval']; ?></li>
-                                                        <br>
-                
-                                                    <?php } ?>
-                                                    </ul>
-                                                    </td>
-                                                    <td>
-                                                    <?php if ($value2['approve_by'] == '') { ?>
+                                                    <?php if ($value2['approver'] == 'level') { ?>
 
-                                                        <?php echo $value2['status']; ?>
+                                                        <td>
+                                                            <ul>
+                                                            <?php foreach ($value2['approval'] as $key => $app) { ?>
+                                                                <li>
+                                                                <?= $app['approval']; ?>
+
+                                                                <?php if ($app['status'] == 'Waiting Approval') { ?>
+
+                                                                    : <label class="div-request-pulsate"><?= $app['status']; ?></label>
+
+                                                                <?php } elseif ($app['status'] == 'Approve') { ?>
+
+                                                                    : <label class="label bg-green-jungle font-dark"><?= $app['status']; ?></label>
+                                                                    
+                                                                <?php } else { ?>
+
+                                                                <?php } ?>
+
+                                                                    
+                                                                </li>
+                                                                <br>
+                                                            <?php } ?>
+                                                            </ul>
+
+                                                        </td>
 
                                                     <?php } else { ?>
 
-                                                        <?php echo $value2['status']; ?> By : <b><?php echo $value2['approve_by']; ?></b>
+                                                        <td>
+                                                            <ul>
+                                                            <?php foreach ($value2['approval'] as $key => $app) { ?>
+                                                                <li><?= $app['approval']; ?></li>
+                                                                <br>
+                                                            <?php } ?>
+                                                            </ul>
+
+                                                        </td>
+                                                        <td>
+
+                                                                <?php if ($value2['status'] == 'Approve') { ?>
+                                                                
+                                                                    <label class="label bg-green-jungle font-dark"><?php echo $value2['status']; ?></label>
+
+                                                                <?php } else { ?>
+
+                                                                     <?php echo $value2['status']; ?>
+ 
+                                                                <?php } ?>
+
+                                                        </td>
 
                                                     <?php } ?>
 
-                                                    
 
-
-                                                    </td>
                                                     <td>
 
                                                         <?php if ($value2['status'] == 'Approve') { ?>

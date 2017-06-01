@@ -100,16 +100,16 @@ class Company extends \yii\mongodb\ActiveRecord
         return [
             [['asia_ebuy_no', 'company_name', 'address', 'country', 'state', 'city', 'zip_code', 'type_of_business', 'bank_account_name', 'bank_account_no', 'bank', 'tax_no', 'company_registeration_no', 'keyword', 'date_create', 'date_update', 'enter_by', 'update_by', 'type', 'email', 'website', 'admin', 'warehouses', 'telephone_no', 'fax_no', 'logo', 'term','status'], 'safe'],
 
-           /* ['company_name', 'required', 'message' => 'Please Fill Company Name'],
-            ['address', 'required', 'message' => 'Please Fill Company Address'],
-            ['country', 'required', 'message' => 'Please Choose Country'],
-            ['state', 'required', 'message' => 'Please Choose State'],
-            ['city', 'required', 'message' => 'Please Fill City'],
-            ['telephone_no', 'required', 'message' => 'Please Fill Telephone No'],
-            ['telephone_no', 'required', 'message' => 'Please Fill Telephone No'],
-            ['term', 'required', 'message' => 'Please Choose Term'],
-            ['bank', 'required', 'message' => 'Please Choose Bank'],
-            ['bank_account_no', 'required', 'message' => 'Please Fill Bank Account No'], */
+            ['company_name', 'required', 'message' => 'Please Fill Company Name','on'=>'manage-company'],
+            ['address', 'required', 'message' => 'Please Fill Company Address','on'=>'manage-company'],
+            ['country', 'required', 'message' => 'Please Choose Country','on'=>'manage-company'],
+            ['state', 'required', 'message' => 'Please Choose State','on'=>'manage-company'],
+            ['city', 'required', 'message' => 'Please Fill City','on'=>'manage-company'],
+            ['telephone_no', 'required', 'message' => 'Please Fill Telephone No','on'=>'manage-company'],
+            ['telephone_no', 'required', 'message' => 'Please Fill Telephone No','on'=>'manage-company'],
+            ['term', 'required', 'message' => 'Please Choose Term','on'=>'manage-company'],
+            ['bank', 'required', 'message' => 'Please Choose Bank','on'=>'manage-company'],
+            ['bank_account_no', 'required', 'message' => 'Please Fill Bank Account No','on'=>'manage-company'],
 
         ];
     }
@@ -174,7 +174,7 @@ class Company extends \yii\mongodb\ActiveRecord
 
 
     
-/*
+
     public static function Company()
     {
 
@@ -197,7 +197,7 @@ class Company extends \yii\mongodb\ActiveRecord
 
     return $data;
 
-    }*/
+    }
 
 
 

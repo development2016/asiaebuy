@@ -109,7 +109,9 @@ class CompanyController extends Controller
 
     public function actionManageCompany($company_id)
     {
+
         $model = $this->findModel($company_id);
+        $model->scenario = 'manage-company';
 
         if ($model->load(Yii::$app->request->post()) ) {
 

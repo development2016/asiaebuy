@@ -29,6 +29,62 @@ class RequestController extends Controller
         $user = User::find()->where(['id'=>$user_id])->one();
 
         $collection = Yii::$app->mongo->getCollection('project');
+
+
+        $checkApprover = $collection->aggregate([
+            [
+                '$unwind' => '$sellers'
+            ], 
+            [
+                '$unwind' => '$sellers.approval'
+            ], 
+
+            [
+                '$match' => [
+                    '$and' => [
+                            [
+                                'buyer' => $user->account_name
+                            ],
+                            [
+                                'sellers.approval.status' => 'Waiting Approval'
+                            ],
+                    ],
+
+                    
+                ]
+            ],
+            [
+                '$group' => [
+                    '_id' => '$_id',
+                    'title' => ['$first' => '$title' ],
+                    'sellers' => [
+                        '$push' => [
+                            'approval' => '$sellers.approval',
+
+                            
+                        ],
+                        
+                    ],
+
+
+            
+                ]
+            ],
+
+
+
+        ]);
+
+
+
+
+
+        //$is_have = empty($checkApprover[0]['sellers'][0]['approval']['approval']) ? '' : $checkApprover[0]['sellers'][0]['approval']['approval'];
+
+
+       // $user = ['badru@Buyer1000'=>'badru@Buyer1000','hadi@Buyer1000'=>'hadi@Buyer1000'];
+
+
         $model = $collection->aggregate([
             [
                 '$unwind' => '$sellers'
@@ -80,7 +136,9 @@ class RequestController extends Controller
                             'revise' => '$sellers.revise',
                             'items' => '$sellers.items',
                             'requester' =>'$sellers.requester',
+                            'approver' => '$sellers.approver',
                             'approve_by' => '$sellers.approve_by',
+                            'approver_level' => '$sellers.approver_level',
                             
                         ],
                         
@@ -98,7 +156,6 @@ class RequestController extends Controller
 
 
         ]);
-
 
 
 
@@ -124,27 +181,18 @@ class RequestController extends Controller
 			[
 				'$unwind' => '$sellers'
 			], 
+
 			[
 				'$match' => [
 					'$or' => [
     						[
-    							'sellers.status' => 'Request Approval'
+    							'sellers.approval.approval' => $user->account_name
     						],
-                            [
-                                'sellers.status' => 'Approve'
-                            ],
+  
     						[
     							'sellers.status' => 'Pending Approval'
     						],
 					],
-                    '$and' => [
-                            [
-                            	'sellers.approval.approval' => 
-                                    $user->account_name
-
-                                    
-                            ]
-                    ],
 
 					
 				]
@@ -169,7 +217,9 @@ class RequestController extends Controller
                             'approval' => '$sellers.approval',
                             'seller' => '$sellers.seller',
                             'revise' => '$sellers.revise',
+                            'approver' => '$sellers.approver',
                             'items' => '$sellers.items',
+                            'approver_level' => '$sellers.approver_level'
                             
                         ],
                         
@@ -188,8 +238,11 @@ class RequestController extends Controller
 
 		]);
 
+
+
         return $this->render('request',[
         	'model' => $model,
+            'user' => $user,
 
         ]);
 
@@ -270,12 +323,13 @@ class RequestController extends Controller
             'companySeller' => $companySeller,
             'companyBuyer' => $companyBuyer,
             'seller' => $seller,
-            'project' => $project
+            'project' => $project,
+            
         ]);
 
     }
 
-    public function actionGuidePurchaseRequisitionApprove($project,$seller,$buyer)
+    public function actionGuidePurchaseRequisitionApprove($project,$seller,$buyer,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -351,7 +405,8 @@ class RequestController extends Controller
             'companySeller' => $companySeller,
             'companyBuyer' => $companyBuyer,
             'seller' => $seller,
-            'project' => $project
+            'project' => $project,
+            'approver' => $approver
         ]);
 
     }
@@ -1716,52 +1771,343 @@ class RequestController extends Controller
 
 
 
-
-
-
-
-
-
-
-    public function actionApprove($project,$seller)
+    public function actionApprove($project,$seller,$approver)
     {
 
 
         $approval_info = User::find()->where(['id'=>Yii::$app->user->identity->id])->one();
 
+
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
-        $collection = Yii::$app->mongo->getCollection('project');
-        $model = $collection->aggregate([
-            [
-                '$unwind' => '$sellers'
-            ],
-            [
-                '$match' => [
-                    '_id' => $newProject_id,
-                    'sellers.seller' => $seller,
-                ]
-            ],
+        if ($approver == 'level') {
 
-        ]); 
+                $collection = Yii::$app->mongo->getCollection('project');
+                $checkApprover = $collection->aggregate([
+                    [
+                        '$unwind' => '$sellers'
+                    ], 
+                    [
+                        '$unwind' => '$sellers.approval'
+                    ], 
+                    [
+                        '$match' => [
+                            '$and' => [
+                                    [
+                                        'sellers.approval.status' => ''
+                                    ],
+                            ],
 
 
-        $purchase_requisition_no = $model[0]['sellers']['purchase_requisition_no'];
+                            '_id' => $newProject_id,
+                            'sellers.seller' => $seller,
+                        ]
+                    ],
 
-        $collection = Yii::$app->mongo->getCollection('project');
-        $arrUpdate = [
-            '$set' => [
-                'date_update' => date('Y-m-d h:i:s'),
-                'update_by' => Yii::$app->user->identity->id,
-                'sellers.$.status' => 'Approve',
-                'sellers.$.approve_by' => $approval_info->account_name,
 
-            ],
+                    [
+                        '$group' => [
+                            '_id' => '$_id',
+                            'title' => ['$first' => '$title' ],
+                            'sellers' => [
+                                '$push' => [
+                                    'approval' => '$sellers.approval',
+
+                                    
+                                ],
+                                
+                            ],
+
+
+                    
+                        ]
+                    ],
+
+
+
+                ]);
+
+
+
+                if (empty($checkApprover[0]['sellers'])) {
+
+
+                    $collection = Yii::$app->mongo->getCollection('project');
+                    $checkIndex = $collection->aggregate([
+                        [
+                            '$unwind' => '$sellers'
+                        ], 
+                        [
+                            '$match' => [
+                                '$and' => [
+                                        [
+                                            'sellers.approval.status' => 'Waiting Approval'
+                                        ],
+                                ],
+
+
+                                '_id' => $newProject_id,
+                                'sellers.seller' => $seller,
+                            ]
+                        ],
+                        [
+                            '$group' => [
+                                '_id' => '$_id',
+                                'title' => ['$first' => '$title' ],
+                                'sellers' => [
+                                    '$push' => [
+                                        'approval' => '$sellers.approval',
+
+                                        
+                                    ],
+                                    
+                                ],
+
 
                         
-        ];
+                            ]
+                        ],
 
-        $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+
+                    ]);
+
+
+
+                    foreach ($checkIndex[0]['sellers'][0]['approval'] as $key => $value) {
+
+                        if ($value['status'] == 'Waiting Approval') {
+
+                            $getKey =  $key;
+              
+                
+                        }
+                    }
+
+
+                
+                        // update status approver
+                        $collection = Yii::$app->mongo->getCollection('project');
+                        $arrUpdate = [
+                            '$set' => [
+                                'sellers.$.approval.'.$getKey.'.status' => 'Approve',
+                                'sellers.$.status' => 'Approve',
+                                'sellers.$.approver_level' => ''
+
+                            ]
+                        
+                        ];
+                        $collection->update(
+                            [
+                                '_id' => $newProject_id,
+                                'sellers.seller' => $seller,
+
+                        ],$arrUpdate);
+
+
+
+
+                        // update status to approve
+                        // update status approver to approve
+
+                    
+                } else {
+
+                    $collection = Yii::$app->mongo->getCollection('project');
+                    $checkIndexs = $collection->aggregate([
+                        [
+                            '$unwind' => '$sellers'
+                        ], 
+ 
+                        [
+                            '$match' => [
+                                '$and' => [
+                                        [
+                                            'sellers.approval.status' => 'Waiting Approval'
+                                        ],
+                                ],
+
+
+                                '_id' => $newProject_id,
+                                'sellers.seller' => $seller,
+                            ]
+                        ],
+
+
+
+                        [
+                            '$group' => [
+                                '_id' => '$_id',
+                                'title' => ['$first' => '$title' ],
+                                'sellers' => [
+                                    '$push' => [
+                                        'approval' => '$sellers.approval',
+
+                                        
+                                    ],
+                                    
+                                ],
+
+
+                        
+                            ]
+                        ],
+
+
+
+                    ]);
+
+
+
+
+
+
+
+                    foreach ($checkIndexs[0]['sellers'][0]['approval'] as $key => $value) {
+
+
+                        if ($value['status'] == 'Waiting Approval') {
+
+                            $getKey =  $key;
+                            $newKey = $getKey+1;
+                
+                        }
+
+                        
+                    }
+
+
+
+                
+                        // update status approver
+                        $collection = Yii::$app->mongo->getCollection('project');
+                        $arrUpdate = [
+                            '$set' => [
+                                'sellers.$.approval.'.$getKey.'.status' => 'Approve',
+                                'sellers.$.approval.'.$newKey.'.status' => 'Waiting Approval',
+
+                            ]
+                        
+                        ];
+                        $collection->update(
+                            [
+                                '_id' => $newProject_id,
+                                'sellers.seller' => $seller,
+
+                        ],$arrUpdate);
+
+                        // check next approver
+                    $checkApproverNext = $collection->aggregate([
+                        [
+                            '$unwind' => '$sellers'
+                        ], 
+                        [
+                            '$unwind' => '$sellers.approval'
+                        ], 
+                        [
+                            '$match' => [
+                                '$and' => [
+                                        [
+                                            'sellers.approval.status' => 'Waiting Approval'
+                                        ],
+                                ],
+
+
+                                '_id' => $newProject_id,
+                                'sellers.seller' => $seller,
+                            ]
+                        ],
+
+
+                        [
+                            '$group' => [
+                                '_id' => '$_id',
+                                'title' => ['$first' => '$title' ],
+                                'sellers' => [
+                                    '$push' => [
+                                        'approval' => '$sellers.approval',
+
+                                        
+                                    ],
+                                    
+                                ],
+
+
+                        
+                            ]
+                        ],
+
+
+
+                    ]);
+
+                    $checkApproverNext[0]['sellers'][0]['approval']['approval'];
+
+                    // save status to next approver to approve
+                    $collection = Yii::$app->mongo->getCollection('project');
+                        $arrUpdate = [
+                            '$set' => [
+                                'sellers.$.approver_level' => $checkApproverNext[0]['sellers'][0]['approval']['approval'],
+
+
+                            ]
+                        
+                        ];
+                        $collection->update(
+                            [
+                                '_id' => $newProject_id,
+                                'sellers.seller' => $seller,
+
+                        ],$arrUpdate);
+
+
+
+
+                }
+
+
+
+        } else {
+
+            $collection = Yii::$app->mongo->getCollection('project');
+            $model = $collection->aggregate([
+                [
+                    '$unwind' => '$sellers'
+                ],
+                [
+                    '$match' => [
+                        '_id' => $newProject_id,
+                        'sellers.seller' => $seller,
+                    ]
+                ],
+
+            ]); 
+
+
+            $purchase_requisition_no = $model[0]['sellers']['purchase_requisition_no'];
+
+            $collection = Yii::$app->mongo->getCollection('project');
+            $arrUpdate = [
+                '$set' => [
+                    'date_update' => date('Y-m-d h:i:s'),
+                    'update_by' => Yii::$app->user->identity->id,
+                    'sellers.$.status' => 'Approve',
+                    'sellers.$.approve_by' => $approval_info->account_name,
+
+                ],
+
+                            
+            ];
+
+            $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+
+
+        }
+
+
+
+
 
 
         return $this->redirect(['request/request']);

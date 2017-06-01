@@ -100,6 +100,7 @@ class SourceController extends Controller
                             'seller' => '$sellers.seller',
                             'revise' => '$sellers.revise',
                             'items' => '$sellers.items',
+                            'approver' => '$sellers.approver'
                             
                         ],
                         
@@ -232,7 +233,7 @@ class SourceController extends Controller
 
 
 
-    public function actionGuidePurchaseRequisition($project,$seller,$buyer)
+    public function actionGuidePurchaseRequisition($project,$seller,$buyer,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -450,7 +451,8 @@ class SourceController extends Controller
             'companyBuyer' => $companyBuyer,
             'seller' => $seller,
             'project' => $project,
-            'buyer' => $buyer
+            'buyer' => $buyer,
+            'approver' => $approver
         ]);
 
     }
@@ -1603,6 +1605,7 @@ class SourceController extends Controller
                     
                     $tempApp[] = [
                         'approval' => $value,
+
             
                     ];
 
@@ -1615,6 +1618,7 @@ class SourceController extends Controller
 
                 $arrUpdate = [
                     '$set' => [
+                        'sellers.$.approver' => 'normal',
                         'sellers.$.approval' =>  $tempApp
 
                     ]
@@ -1627,7 +1631,7 @@ class SourceController extends Controller
 
             if ($type == 'guide') {
 
-                return $this->redirect(['source/guide-purchase-requisition','project'=>$project,'seller'=>$seller,'buyer'=>$buyer]);
+                return $this->redirect(['source/guide-purchase-requisition','project'=>$project,'seller'=>$seller,'buyer'=>$buyer,'approver'=>'normal']);
 
             } elseif ($type == 'sale') {
 
@@ -1724,7 +1728,7 @@ class SourceController extends Controller
         $a=0;
         for ($i=0; $i < $_POST['level']; $i++) { $a++;
 
-            echo "<label>Approver</label>";
+            echo "<label>Approver Level ".$a."</label>";
             echo "<select class='form-control' name='approval[approver_no_".$a."]'>";
             foreach ($approval as $key => $value) {
                 echo "<option>".$value['account_name']."</option>";
@@ -1752,6 +1756,7 @@ class SourceController extends Controller
             
             $tempApp[] = [
                 'approval' => $value,
+                'status' => ''
     
             ];
 
@@ -1765,7 +1770,8 @@ class SourceController extends Controller
 
         $arrUpdate = [
             '$set' => [
-                'sellers.$.approval' =>  $tempApp
+                'sellers.$.approver' => 'level',
+                'sellers.$.approval' =>  $tempApp,
 
             ]
         
@@ -1777,7 +1783,7 @@ class SourceController extends Controller
 
         if ($_POST['type'] == 'guide') {
 
-            return $this->redirect(['source/guide-purchase-requisition','project'=>$_POST['project'],'seller'=>$_POST['seller'],'buyer'=>$_POST['buyer']]);
+            return $this->redirect(['source/guide-purchase-requisition','project'=>$_POST['project'],'seller'=>$_POST['seller'],'buyer'=>$_POST['buyer'],'approver'=>'level']);
 
         } elseif ($_POST['type'] == 'sale') {
 
