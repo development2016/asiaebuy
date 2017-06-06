@@ -106,10 +106,9 @@ class Company extends \yii\mongodb\ActiveRecord
             ['state', 'required', 'message' => 'Please Choose State','on'=>'manage-company'],
             ['city', 'required', 'message' => 'Please Fill City','on'=>'manage-company'],
             ['telephone_no', 'required', 'message' => 'Please Fill Telephone No','on'=>'manage-company'],
-            ['telephone_no', 'required', 'message' => 'Please Fill Telephone No','on'=>'manage-company'],
-            ['term', 'required', 'message' => 'Please Choose Term','on'=>'manage-company'],
-            ['bank', 'required', 'message' => 'Please Choose Bank','on'=>'manage-company'],
-            ['bank_account_no', 'required', 'message' => 'Please Fill Bank Account No','on'=>'manage-company'],
+            //['term', 'required', 'message' => 'Please Choose Term','on'=>'manage-company'],
+           // ['bank', 'required', 'message' => 'Please Choose Bank','on'=>'manage-company'],
+           // ['bank_account_no', 'required', 'message' => 'Please Fill Bank Account No','on'=>'manage-company'],
 
         ];
     }
@@ -172,6 +171,7 @@ class Company extends \yii\mongodb\ActiveRecord
         return $this->hasOne(LookupState::className(), ['id' => 'state']);
     }
 
+/*
 
     
 
@@ -197,11 +197,11 @@ class Company extends \yii\mongodb\ActiveRecord
 
     return $data;
 
-    }
+    } 
 
 
 
-
+*/
 
 
 

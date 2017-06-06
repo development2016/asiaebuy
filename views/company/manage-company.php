@@ -19,7 +19,19 @@ $type_of_business = ArrayHelper::map(LookupTypeOfBusiness::find()->asArray()->al
 $bank = ArrayHelper::map(LookupBank::find()->asArray()->all(), 'bank', 'bank');
 $term = ArrayHelper::map(LookupTerm::find()->asArray()->all(), 'term', 'term');
 
+$script = <<< JS
+$(document).ready(function(){
 
+    $('.uploads').click(function(){
+        $('#modal').modal('show')
+        .find('#modalContent')
+        .load($(this).attr('value'));
+
+    });
+
+}); 
+JS;
+$this->registerJs($script);
 
 $this->title = 'Manage Company';
 ?>
@@ -45,6 +57,18 @@ $this->title = 'Manage Company';
                     <span class="caption-subject font-dark bold uppercase"><?= Html::encode($this->title) ?></span>
                 </div>
 
+
+            <div class="actions">
+                <div class="btn-group btn-group-devided" >
+
+
+                    <?= Html::a('Upload Logo <i class="fa fa-upload"></i>',FALSE, ['value'=>Url::to(['company/upload','company_id'=>$company_id]),'class' => 'btn blue-steel btn-outline btn-sm uploads','id'=>'','title'=>'Upload Logo']) ?>
+
+                </div>
+            </div>
+
+
+
             </div>
             <div class="portlet-body">
 
@@ -63,6 +87,17 @@ $this->title = 'Manage Company';
                 <div class="row">
 
                     <div  class="col-lg-6 col-xs-12 col-sm-12">
+
+                    <?php if (empty($model->logo)) { ?>
+                    
+                    <?php } else { ?>
+
+                        <img src="<?php echo Yii::$app->request->baseUrl;?>/<?php echo $model->logo ?>" class="img-responsive" alt="" />
+
+                    <?php } ?>
+
+
+
 
                         <?= $form->field($model, 'asia_ebuy_no')->textInput(['maxlength' => true,'readonly'=>true]) ?>
 

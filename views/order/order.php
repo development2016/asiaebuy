@@ -77,6 +77,15 @@ $(document).ready(function(){
 
 
 
+    $('.confirm_order_guide').click(function(){
+        $('#modal').modal('show')
+        .find('#modalContent')
+        .load($(this).attr('value'));
+
+    });
+
+
+
 
 
 }); 
@@ -240,6 +249,14 @@ $this->registerJs($script);
                                                     <td>
                                                         <?php if ($value['type_of_project'] == 'Guide Buying') { ?>
 
+                                                            <div class="margin-bottom-5">
+                                                                <?= Html::a('Confirm Order',FALSE, ['value'=>Url::to([
+                                                                'order/guide-confirm',
+                                                                'project'=>(string)$value['_id'],
+                                                                'seller'=>$value2['seller'],
+                                                                'buyer' => $value['buyer']
+                                                                ]),'class' => 'btn blue btn-sm btn-outline confirm_order_guide','title' => 'Confirm Order',]) ?>
+                                                            </div>
 
                                                             <div class="margin-bottom-5">
 

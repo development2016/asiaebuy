@@ -124,7 +124,7 @@ $mdl = LookupModel::find()->where(['id'=>$list[0]['sellers'][0]['items'][0]['mod
 
                     <div class="col-md-3">
                         <div class="row static-info">
-                            <div class="col-md-5"> <h4 class="bold">PR No : </h4></div>
+                            <div class="col-md-5"> <h4 class="bold">PO No : </h4></div>
                             <div class="col-md-7"> <h4 class="bold"><?= $list[0]['sellers'][0]['purchase_order_no'] ?></h4></div>
                         </div>
                         <div class="row static-info">

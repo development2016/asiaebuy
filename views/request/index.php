@@ -235,6 +235,7 @@ $this->registerJs($script);
                                             <table class="table table-bordered " >
                                                 <tr style="background-color: #ecf6ff;">
                                                     <th class="uppercase">Seller Name</th>
+                                                    <?php foreach ($value['sellers'] as $key => $value2) { ?>
                                                     <?php if ($value2['approver'] == 'level') { ?>
 
                                                          <th class="uppercase">Approval / Status</th>
@@ -244,6 +245,7 @@ $this->registerJs($script);
                                                         <th class="uppercase">Approval</th>
                                                         <th class="uppercase">Status</th>
 
+                                                    <?php } ?>
                                                     <?php } ?>
                                                     <th class="uppercase">Action</th>
                                                 </tr>

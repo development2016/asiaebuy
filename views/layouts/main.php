@@ -144,7 +144,7 @@ $this->registerJs($script);
                                             [
                                                 'label' => '<i class="icon-key"></i> Log out', 
                                                 'url' => ['site/logout'],
-                                                'template'=> '<a href="{url}" class="text-uppercase" data-method="post">{label}</a>',
+                                                'template'=> '<a href="{url}" class="text-uppercase" data-method="POST">{label}</a>',
           
                                             ],
 
@@ -210,16 +210,10 @@ $this->registerJs($script);
                                                 'visible' => User::checkMenu('3004'),
                                             ],
                                             [
-                                                'label' => '<i class="icon-note"></i>Receipt', 
+                                                'label' => 'Receipt / Invoice', 
                                                 'url' => ['receipt/index'],
                                                 'template'=> '<a href="{url}" class="text-uppercase">{label}</a>',
                                                 'visible' => User::checkMenu('3005'),
-                                            ],
-                                            [
-                                                'label' => '<i class="icon-doc"></i>Invoice', 
-                                                'url' => ['invoice/index'],
-                                                'template'=> '<a href="{url}" class="text-uppercase">{label}</a>',
-                                                'visible' => User::checkMenu('3006'),
                                             ],
                                             [
                                                 'label' => '<i class="icon-wallet"></i>Payment', 
@@ -261,23 +255,17 @@ $this->registerJs($script);
                                             ],
                                             [
                                                 'label' => '<i class="icon-check"></i>Order Confirmation', 
-                                                'url' => ['order-confirm/index'],
+                                                'url' => ['order-confirm/order-confirm'],
                                                 'template'=> '<a href="{url}" class="text-uppercase">{label}</a>',
                                                 'visible' => User::checkMenu('2005'),
                                             ],
                                                                                 [
-                                                'label' => '<i class="icon-basket-loaded"></i>Ship', 
+                                                'label' => 'Ship / Invoice', 
                                                 'url' => ['ship/index'],
                                                 'template'=> '<a href="{url}" class="text-uppercase">{label}</a>',
                                                 'visible' => User::checkMenu('2006'),
                                             ],
-                                                                                [
-                                                'label' => '<i class="icon-doc"></i>Invoice', 
-                                                'url' => ['invoice/index'],
-                                                'template'=> '<a href="{url}" class="text-uppercase">{label}</a>',
-                                                'visible' => User::checkMenu('2007'),
-                                            ],
-                                                                                [
+                                            [
                                                 'label' => '<i class="icon-wallet"></i>Payment', 
                                                 'url' => ['#'],
                                                 'template'=> '<a href="{url}" class="text-uppercase">{label}</a>',

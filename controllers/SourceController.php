@@ -907,7 +907,7 @@ class SourceController extends Controller
 
     }
 
-    public function actionDirectPurchaseRequisition($project,$buyer,$seller)
+    public function actionDirectPurchaseRequisition($project,$buyer,$seller,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -1104,12 +1104,13 @@ class SourceController extends Controller
             'companyBuyer' => $companyBuyer,
             'seller' => $seller,
             'project' => $project,
-            'buyer'=> $buyer
+            'buyer'=> $buyer,
+            'approver' => $approver
         ]);
 
     }
 
-    public function actionItem($seller,$project,$path)
+    public function actionItem($seller,$project,$path,$approver)
     {
         $offline = new ItemOffline();
 
@@ -1566,7 +1567,8 @@ class SourceController extends Controller
                     'source/direct-purchase-requisition', 
                     'project' => (string)$newProject_id,
                     'seller'=>$seller,
-                    'buyer' => $process[0]['buyer']
+                    'buyer' => $process[0]['buyer'],
+                    'approver' => $approver
                 ]);
             
 
@@ -1635,15 +1637,15 @@ class SourceController extends Controller
 
             } elseif ($type == 'sale') {
 
-                return $this->redirect(['source/sale-purchase-requisition','project'=>$project,'seller'=>$seller,'buyer'=>$buyer]);
+                return $this->redirect(['source/sale-purchase-requisition','project'=>$project,'seller'=>$seller,'buyer'=>$buyer,'approver'=>'normal']);
              
             } elseif ($type == 'spot') {
 
-                return $this->redirect(['source/spot-purchase-requisition','project'=>$project,'seller'=>$seller,'buyer'=>$buyer]);
+                return $this->redirect(['source/spot-purchase-requisition','project'=>$project,'seller'=>$seller,'buyer'=>$buyer,'approver'=>'normal']);
            
             } elseif ($type == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition','project'=>$project,'seller'=>$seller,'buyer'=>$buyer]);
+                return $this->redirect(['source/direct-purchase-requisition','project'=>$project,'seller'=>$seller,'buyer'=>$buyer,'approver'=>'normal']);
            
             }
 
@@ -1787,15 +1789,15 @@ class SourceController extends Controller
 
         } elseif ($_POST['type'] == 'sale') {
 
-            return $this->redirect(['source/sale-purchase-requisition','project'=>$_POST['project'],'seller'=>$_POST['seller'],'buyer'=>$_POST['buyer']]);
+            return $this->redirect(['source/sale-purchase-requisition','project'=>$_POST['project'],'seller'=>$_POST['seller'],'buyer'=>$_POST['buyer'],'approver'=>'level']);
          
         } elseif ($_POST['type'] == 'spot') {
 
-            return $this->redirect(['source/spot-purchase-requisition','project'=>$_POST['project'],'seller'=>$_POST['seller'],'buyer'=>$_POST['buyer']]);
+            return $this->redirect(['source/spot-purchase-requisition','project'=>$_POST['project'],'seller'=>$_POST['seller'],'buyer'=>$_POST['buyer'],'approver'=>'level']);
        
         } elseif ($_POST['type'] == 'direct') {
 
-            return $this->redirect(['source/direct-purchase-requisition','project'=>$_POST['project'],'seller'=>$_POST['seller'],'buyer'=>$_POST['buyer']]);
+            return $this->redirect(['source/direct-purchase-requisition','project'=>$_POST['project'],'seller'=>$_POST['seller'],'buyer'=>$_POST['buyer'],'approver'=>'level']);
        
         }
 

@@ -177,7 +177,72 @@ class OrderController extends Controller
 
     }
 
+    public function actionGuideConfirm($project,$seller,$buyer)
+    {
 
+        $newProject_id = new \MongoDB\BSON\ObjectID($project);
+        $model = Project::find()->where(['_id'=>$newProject_id])->one();
+
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            if ($_POST['Project']['sellers'][0]['status_confirm'] == 'Confirm All') {
+
+                $collection = Yii::$app->mongo->getCollection('project');
+                $arrUpdate = [
+                    '$set' => [
+                        'date_update' =>  date('Y-m-d h:i:s'),
+                        'update_by' => Yii::$app->user->identity->id,
+                        'sellers.$.status' => 'Agree',
+                        'sellers.$.status_of_accept' => $_POST['Project']['sellers'][0]['status_confirm'],
+                        'sellers.$.status_of_do' => 'Waiting DO',
+                        'sellers.$.estimate_shipping_date' => $_POST['Project']['sellers'][0]['estimate_shipping_date'],
+                        'sellers.$.estimate_arrival_date' => $_POST['Project']['sellers'][0]['estimate_arrival_date'],
+                    ]
+                
+                ];
+                $collection->update(['_id' => (string)$newProject_id,'sellers.seller' => $seller],$arrUpdate); 
+
+
+            } elseif ($_POST['Project']['sellers'][0]['status_confirm'] == 'Confirm With Status') {
+
+
+
+            } elseif ($_POST['Project']['sellers'][0]['status_confirm'] == 'Reject') {
+
+                $collection = Yii::$app->mongo->getCollection('project');
+                $arrUpdate = [
+                    '$set' => [
+                        'date_update' =>  date('Y-m-d h:i:s'),
+                        'update_by' => $id_user,
+                        'sellers.$.status' => $_POST['Project']['sellers'][0]['status_confirm'],
+                        'sellers.$.remark' => $_POST['Project']['sellers'][0]['remark'],
+                    ]
+                
+                ];
+                $collection->update(['_id' => (string)$newProject_id,'sellers.seller' => $seller],$arrUpdate); 
+
+
+
+
+            } else {
+
+            }
+
+            return $this->redirect(['order-confirm/index']);
+
+
+
+
+        } else {
+            return $this->renderAjax('guide-confirm', [
+                'model' => $model,
+            ]);
+        }
+
+
+
+
+    }
 
 
 

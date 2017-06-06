@@ -57,7 +57,7 @@ $(document).ready(function(){
 		      required: true,
 		     
 		    },
-            'CompanyInformation[company_name]':  {
+            'Company[company_name]':  {
               required: true,
              
             },
@@ -73,15 +73,15 @@ $(document).ready(function(){
               required: true,
              
             },
-            'CompanyInformation[country_id]':  {
+            'Company[country_id]':  {
               required: true,
              
             },
-            'CompanyInformation[state_id]':  {
+            'Company[state_id]':  {
               required: true,
              
             },
-            'CompanyInformation[city]':  {
+            'Company[city]':  {
               required: true,
              
             }

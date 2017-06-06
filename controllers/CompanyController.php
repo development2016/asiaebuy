@@ -8,7 +8,10 @@ use app\models\UserCompanySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use app\models\UploadForm;
+use app\models\LogoUpload;
+use yii\web\UploadedFile;
+use app\models\UserCompany;
 /**
  * CompanyController implements the CRUD actions for Company model.
  */
@@ -108,7 +111,8 @@ class CompanyController extends Controller
 
 
     public function actionManageCompany($company_id)
-    {
+    {   
+
 
         $model = $this->findModel($company_id);
         $model->scenario = 'manage-company';
@@ -124,6 +128,7 @@ class CompanyController extends Controller
         } else {
             return $this->render('manage-company',[
                 'model' => $model,
+                'company_id'=> $company_id
             ]);
    
         }
@@ -172,7 +177,6 @@ class CompanyController extends Controller
         $newCompanyid = new \MongoDB\BSON\ObjectID($company_id);
 
         $model = Company::find()->where(['_id'=>$newCompanyid])->one();
-
 
 
         if ($model->load(Yii::$app->request->post())) {
@@ -252,6 +256,56 @@ class CompanyController extends Controller
     }
 
 
+    public function actionUpload($company_id)
+    {
+        $model = new UploadForm();
+        $model2 = new LogoUpload();
+        $model3 = $this->findModel((string)$company_id);
+
+        $returnCompany = UserCompany::find()->where(['user_id'=>Yii::$app->user->identity->id])->one();
+
+        $company = Company::find()->where(['_id'=>$returnCompany->company])->one();
+
+        if (Yii::$app->request->isPost) {
+
+            if (!file_exists(Yii::getAlias('@webroot/offline/'.$company->_id))) {
+                mkdir(Yii::getAlias('@webroot/offline/'.$company->_id), 0777, true);
+            }
+
+            $model->file = UploadedFile::getInstance($model, 'file');
+
+            if ($model->validate()) {   
+
+                if (!file_exists(Yii::getAlias('@webroot/company-logo/'.$company->_id.'/logo'))) {
+                    mkdir(Yii::getAlias('@webroot/company-logo/'.$company->_id.'/logo'), 0777, true);
+                }
+
+                $model->file->saveAs(Yii::getAlias('@webroot/company-logo/'.$company->_id).'/'.'logo/'.$model->file->baseName . '.' . $model->file->extension);
+
+
+                $model2->filename = $model->file->name;
+                $model2->path = '/company-logo'.'/'.$model->file->baseName.'.'.$model->file->extension;
+                $model2->company_id = (string)$company->_id;
+                $model2->enter_by = Yii::$app->user->identity->id;
+                $model2->date_create = date('Y-m-d H:i:s');
+
+                $model3->logo = '/company-logo'.'/'.$company->_id.'/logo/'.$model->file->baseName.'.'.$model->file->extension;
+
+     
+                $model2->save() && $model3->save();
+
+                return $this->redirect(['company/manage-company','company_id'=>(string)$company_id]);
+
+
+            }
+            
+
+        }
+
+        return $this->renderAjax('upload', [
+            'model' => $model,
+        ]);
+    }
 
 
 

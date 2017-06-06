@@ -738,7 +738,7 @@ class RequestController extends Controller
     }
 
 
-    public function actionDirectPurchaseRequisition($project,$buyer,$seller)
+    public function actionDirectPurchaseRequisition($project,$buyer,$seller,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -805,7 +805,8 @@ class RequestController extends Controller
             'companyBuyer' => $companyBuyer,
             'seller' => $seller,
             'project' => $project,
-            'buyer'=> $buyer
+            'buyer'=> $buyer,
+             'approver' => $approver
         ]);
 
 
@@ -813,7 +814,7 @@ class RequestController extends Controller
 
 }
 
-    public function actionDirectPurchaseRequisitionApprove($project,$buyer,$seller)
+    public function actionDirectPurchaseRequisitionApprove($project,$buyer,$seller,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -880,7 +881,8 @@ class RequestController extends Controller
             'companyBuyer' => $companyBuyer,
             'seller' => $seller,
             'project' => $project,
-            'buyer'=> $buyer
+            'buyer'=> $buyer,
+             'approver' => $approver
         ]);
 
 

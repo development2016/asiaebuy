@@ -44,7 +44,7 @@ $mdl = LookupModel::find()->where(['id'=>$list[0]['sellers'][0]['items'][0]['mod
                 <div class="row invoice-head">
                     <div class="col-md-3 col-xs-3">
                         <div class="invoice-logo">
-                            <img src="<?php echo Yii::$app->request->baseUrl;?>/company-logo/<?php echo $companyBuyer->logo; ?>" class="img-responsive" alt="" />
+                            <img src="<?php echo Yii::$app->request->baseUrl;?>/<?php echo $companyBuyer->logo; ?>" class="img-responsive" alt="" />
                         </div>
                     </div>
                     <div class="col-md-9 col-xs-9">

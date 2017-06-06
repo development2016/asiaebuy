@@ -44,7 +44,7 @@ $amount = $sumAmount = $install = $showInstall = $sumInstall = $shipping = $show
                 <div class="row invoice-head">
                     <div class="col-md-3 col-xs-12">
                         <div class="invoice-logo">
-                            <img src="<?php echo Yii::$app->request->baseUrl;?>/company-logo/<?php echo $companyBuyer->logo; ?>" class="img-responsive" alt="" />
+                            <img src="<?php echo Yii::$app->request->baseUrl;?>/<?php echo $companyBuyer->logo; ?>" class="img-responsive" alt="" />
                         </div>
                     </div>
                     <div class="col-md-9 col-xs-12">
@@ -348,7 +348,8 @@ $amount = $sumAmount = $install = $showInstall = $sumInstall = $shipping = $show
                         <?= Html::a('<span class="ladda-label">Approve</span>', [
                         'request/approve',
                         'seller'=>$seller,
-                        'project'=> (string)$project
+                        'project'=> (string)$project,
+                        'approver' => $approver,
                         ], [
                         'class' => 'btn btn-lg blue hidden-print uppercase print-btn mt-ladda-btn ladda-button',
                         'data-style' => 'slide-up'

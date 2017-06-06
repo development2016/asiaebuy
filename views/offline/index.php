@@ -22,15 +22,12 @@ $term = ArrayHelper::map(LookupTerm::find()->asArray()->all(), 'term', 'term');
 $script = <<< JS
 $(document).ready(function(){
 
-
     $('.uploads').click(function(){
         $('#modal').modal('show')
         .find('#modalContent')
         .load($(this).attr('value'));
 
     });
-
-
 
 }); 
 JS;
@@ -66,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="btn-group btn-group-devided" >
 
 
-                    <?= Html::a('Upload Image <i class="fa fa-upload"></i>',FALSE, ['value'=>Url::to(['offline/upload']),'class' => 'btn blue-steel btn-outline btn-sm uploads','id'=>'','title'=>'Upload Image']) ?>
+                    <?= Html::a('Upload Quotation <i class="fa fa-upload"></i>',FALSE, ['value'=>Url::to(['offline/upload']),'class' => 'btn blue-steel btn-outline btn-sm uploads','id'=>'','title'=>'Upload Image']) ?>
                 	<?= Html::a('Remove <i class="fa fa-trash"></i>', ['project/spot'],['class'=>'btn red-sunglo btn-outline btn-sm','title'=>'Remove Image']) ?>
 
                 </div>
@@ -81,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	        
 	        <?php } else { ?>
 
-	        	<img src="<?php echo Yii::$app->request->baseUrl;?>/offline/<?php echo $model2->filename ?>" class="img-responsive" alt="" />
+	        	<img src="<?php echo Yii::$app->request->baseUrl;?>/offline/<?php echo $model2->company_id ?>/direct_purchase/<?php echo $model2->filename ?>" class="img-responsive" alt="" />
 
 	        <?php } ?>
 	   
@@ -132,7 +129,19 @@ $this->params['breadcrumbs'][] = $this->title;
 				        
 				        <?php } else { ?>
 
-				        	<?= $form->field($model3, 'sellers[quotation]')->hiddenInput(['value'=>$model2->filename])->label(false) ?>
+				        	<?= $form->field($model3, 'sellers[quotation]')->hiddenInput(['value'=>$model2->company_id.$model2->path])->label(false) ?>
+
+				        	<?= $form->field($model3, 'direct_purchase[company_id]')->hiddenInput(['value'=>$model2->company_id])->label(false) ?>
+
+				        	<?= $form->field($model3, 'direct_purchase[filename]')->hiddenInput(['value'=>$model2->filename])->label(false) ?>
+
+				        	<?= $form->field($model3, 'direct_purchase[path]')->hiddenInput(['value'=>$model2->path])->label(false) ?>
+
+				        	<?= $form->field($model3, 'direct_purchase[enter_by]')->hiddenInput(['value'=>$model2->enter_by])->label(false) ?>
+
+				        	<?= $form->field($model3, 'direct_purchase[id]')->hiddenInput(['value'=>$model2->id])->label(false) ?>
+
+
 				        <?php } ?>
 
 

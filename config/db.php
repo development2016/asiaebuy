@@ -1,6 +1,6 @@
 <?php
 //$cert = 'C:\xampp\htdocs\asiaebuy\compose.crt';
-/*
+
 $cert = '/var/www/vhosts/asiaebuy.com/httpdocs/stage/compose.crt';
 
 $ctx = stream_context_create(array(
@@ -26,10 +26,10 @@ return [
 	]
 
 ];
-*/
 
 
 
+/*
 return [
 
       
@@ -42,3 +42,4 @@ return [
    //'dsn' => 'mongodb://asia:Amtujpino.1@localhost:27017/asiaebuy',
     // for tem use this connect gii for mongo
 ]; 
+*/

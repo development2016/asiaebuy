@@ -324,6 +324,35 @@ $this->registerJs($script);
                                                             <?php } elseif ($value['type_of_project'] == 'MySpot Buy') { ?>
 
 
+
+                                                            <?php } elseif ($value['type_of_project'] == 'Direct Purchase') { ?>
+
+
+                                                                    <div class="margin-bottom-5">
+
+                                                                            <div class="btn-group">
+                                                                                <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Purchase Requisition
+                                                                                    <i class="fa fa-angle-down"></i>
+                                                                                </a>
+                                                                                <ul class="dropdown-menu">
+                                                                      
+                                                                                    <li>
+                                                                                        <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/direct-purchase-requisition-html',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer' => $value['buyer']
+                                                                                            ],['target'=>'_blank']) ?>
+                                                                                    </li>
+
+                                          
+                                                                                </ul>
+                                                                            </div>
+
+                                                                    </div>
+
+
+
+
                                                             <?php } ?>
 
 
@@ -389,13 +418,37 @@ $this->registerJs($script);
 
                                                             <?php } elseif ($value['type_of_project'] == 'Direct Purchase') { ?>
 
-                                                                <div class="margin-bottom-5">
-                                                                    <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
-                                                                    'project'=>(string)$value['_id'],
-                                                                    'seller'=>$value2['seller'],
-                                                                    'buyer' => $value['buyer']
-                                                                    ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
-                                                                </div>
+                                                                <?php if ($value2['approver'] == 'level') { ?>
+
+                                                                    <?php if ($user->account_name == $value2['approver_level']) { ?>
+                                                                        
+                                                                            <div class="margin-bottom-5">
+                                                                                <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
+                                                                                'project'=>(string)$value['_id'],
+                                                                                'seller'=>$value2['seller'],
+                                                                                'buyer' => $value['buyer'],
+                                                                                'approver' => $value2['approver'],
+                                                                                ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                            </div>
+
+                                                                    <?php } else { ?>
+
+                                                                    <?php } ?>
+
+                                                                <?php } else { ?>
+
+
+                                                                            <div class="margin-bottom-5">
+                                                                                <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
+                                                                                'project'=>(string)$value['_id'],
+                                                                                'seller'=>$value2['seller'],
+                                                                                'buyer' => $value['buyer'],
+                                                                                'approver' => $value2['approver'],
+                                                                                ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                            </div>
+
+                                                                <?php } ?>
+
 
 
                                                             <?php } ?>

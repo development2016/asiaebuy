@@ -504,7 +504,7 @@ class InformationController extends Controller
     }
 
 
-    public function actionSaleItemUpdate($project,$seller,$path,$arrayItem)
+    public function actionSaleItemUpdate($project,$seller,$path,$arrayItem,$approver)
     {
 
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
@@ -578,7 +578,7 @@ class InformationController extends Controller
 
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
             }
             
 
@@ -593,7 +593,7 @@ class InformationController extends Controller
 
     }
 
-    public function actionSaleDetailUpdate($project,$seller,$path,$arrayItem)
+    public function actionSaleDetailUpdate($project,$seller,$path,$arrayItem,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -668,7 +668,7 @@ class InformationController extends Controller
 
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
             }
 
 
@@ -683,7 +683,7 @@ class InformationController extends Controller
 
     }
 
-    public function actionSaleInstallationUpdate($project,$seller,$path,$arrayItem)
+    public function actionSaleInstallationUpdate($project,$seller,$path,$arrayItem,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -775,7 +775,7 @@ class InformationController extends Controller
 
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
             }
             
 
@@ -790,7 +790,7 @@ class InformationController extends Controller
 
     }
 
-    public function actionSaleShippingUpdate($project,$seller,$path,$arrayItem)
+    public function actionSaleShippingUpdate($project,$seller,$path,$arrayItem,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -882,7 +882,7 @@ class InformationController extends Controller
 
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
             }
 
 
@@ -902,7 +902,7 @@ class InformationController extends Controller
 
 
 
-    public function actionSaleQuantityUpdate($project,$seller,$path,$arrayItem)
+    public function actionSaleQuantityUpdate($project,$seller,$path,$arrayItem,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -991,7 +991,7 @@ class InformationController extends Controller
             
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
             }
 
 
@@ -1009,7 +1009,7 @@ class InformationController extends Controller
     }
 
 
-    public function actionSaleCostUpdate($project,$seller,$path,$arrayItem)
+    public function actionSaleCostUpdate($project,$seller,$path,$arrayItem,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -1099,7 +1099,7 @@ class InformationController extends Controller
             
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
             }
 
             
@@ -1116,7 +1116,7 @@ class InformationController extends Controller
 
     }
 
-    public function actionSaleRemove($seller,$project,$path,$arrayItem)
+    public function actionSaleRemove($seller,$project,$path,$arrayItem,$approver)
     {
 
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
@@ -1176,7 +1176,11 @@ class InformationController extends Controller
 
         } else if ($path == 'lead') {
 
-            return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+
+        } else if ($path == 'direct') {
+
+
+            return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
         }
 
 
@@ -1258,6 +1262,11 @@ class InformationController extends Controller
 
     }
 
+
+    public function actionEditDelivery($project,$seller,$buyer,$path,$approver)
+    {
+
+    }
 
 
 

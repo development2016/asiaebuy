@@ -558,15 +558,39 @@ $this->registerJs($script);
                                                                     <?php if (empty($value2['approval'])) { ?>
 
                                                                         <div class="margin-bottom-5">
-                                                                        <?= Html::a('Purchase Requisition',FALSE, ['value'=>Url::to([
-                                                                        'source/choose-approval',
-                                                                        'project'=>(string)$value['_id'],
-                                                                        'seller'=>$value2['seller'],
-                                                                        'buyer'=>$value['buyer'],
-                                                                        'type' => 'direct',
-                                 
-                                                                        ]),'class' => 'btn blue btn-sm btn-outline choose-approval','id'=>'choose-approval','title'=>'Purchase Requisition']) ?>
+                                                                            <div class="btn-group">
+                                                                                    <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Purchase Requisition
+                                                                                        <i class="fa fa-angle-down"></i>
+                                                                                    </a>
+                                                                                    <ul class="dropdown-menu">
+                                                                                        <li>
+                                                                                            <?= Html::a('Choose Approver',FALSE, ['value'=>Url::to([
+                                                                                            'source/choose-approval',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer'=>$value['buyer'],
+                                                                                            'type' => 'direct',
+                                                     
+                                                                                            ]),'class' => 'choose-approval','id'=>'choose-approval','title'=>'Choose Approver']) ?>
+
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <?= Html::a('Choose Approver By Level',FALSE, ['value'=>Url::to([
+                                                                                            'source/choose-approval-level',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer'=>$value['buyer'],
+                                                                                            'type' => 'direct',
+                                                     
+                                                                                            ]),'class' => 'choose-approval-level','id'=>'choose-approval-level','title'=>'Choose Approver By Level']) ?>
+                                                                                            
+                                                                                        </li>
+                                                                                    </ul>
+                                                                            </div>
+
+
                                                                         </div>
+
 
                                                                     <?php } else { ?>
 
@@ -575,10 +599,10 @@ $this->registerJs($script);
                                                                     <?= Html::a('Purchase Requisition', ['source/direct-purchase-requisition',
                                                                         'project'=>(string)$value['_id'],
                                                                         'seller'=>(string)$value2['seller'],
+                                                                        'approver'=>$value2['approver'],
                                                                         'buyer'=>$value['buyer'],
                                                                         ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                     </div>
-
 
                                                                     <?php }  ?>
 

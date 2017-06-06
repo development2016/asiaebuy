@@ -418,7 +418,7 @@ class GenerateController extends Controller
  // START FOR DIRECT PURCHASE GENERATE QUOTATION / PURCHASE REQUISITION / PURCHASE ORDER / DELIVERY ORDER / INVOICE
 
 
-    public function actionGenerateDirectPurchaseRequisition($project,$seller)
+    public function actionGenerateDirectPurchaseRequisition($project,$seller,$approver)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -436,18 +436,78 @@ class GenerateController extends Controller
 
         ]); 
 
+        if ($approver == 'level') {
 
-        $collection = Yii::$app->mongo->getCollection('project');
-        $arrUpdate = [
-            '$set' => [
-                'date_update' => date('Y-m-d h:i:s'),
-                'update_by' => Yii::$app->user->identity->id,
-                'sellers.$.status' => 'Request Approval',
+                $collection = Yii::$app->mongo->getCollection('project');
+                $arrUpdate = [
+                    '$set' => [
+                        'date_update' => date('Y-m-d h:i:s'),
+                        'update_by' => Yii::$app->user->identity->id,
+                        'sellers.$.status' => 'Request Approval',
+                        'sellers.$.approval.0.status' => 'Waiting Approval',
+                        'sellers.$.approver_level' => $model[0]['sellers']['approval'][0]['approval'],
 
-            ]
-        
-        ];
-        $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+                    ]
+                
+                ];
+                $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+        } else {
+
+             $connection = \Yii::$app->db;
+             $sql = $connection->createCommand('SELECT lookup_menu.as_a AS as_a,acl.user_id AS id_user,lookup_role.role AS role FROM acl 
+              RIGHT JOIN acl_menu ON acl.acl_menu_id = acl_menu.id
+              RIGHT JOIN lookup_menu ON acl_menu.menu_id = lookup_menu.menu_id
+              RIGHT JOIN lookup_role ON acl_menu.role_id = lookup_role.role_id
+              WHERE acl.user_id = "'.(int)Yii::$app->user->identity->id.'" GROUP BY lookup_role.role');
+            $getRole = $sql->queryAll(); 
+
+
+            if ($getRole[0]['role'] == 'User') {
+
+
+                $collection = Yii::$app->mongo->getCollection('project');
+                $arrUpdate = [
+                    '$set' => [
+                        'date_update' => date('Y-m-d h:i:s'),
+                        'update_by' => Yii::$app->user->identity->id,
+                        'sellers.$.requester' => '',
+                        'sellers.$.approve_by' => '',
+                        'sellers.$.status' => 'Request Approval',
+
+
+                    ]
+                
+                ];
+                $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+             
+            } else {
+
+
+                $collection = Yii::$app->mongo->getCollection('project');
+                $arrUpdate = [
+                    '$set' => [
+                        'date_update' => date('Y-m-d h:i:s'),
+                        'update_by' => Yii::$app->user->identity->id,
+                        'sellers.$.status' => 'Request Approval',
+                        'sellers.$.approve_by' => '',
+
+
+                    ]
+                
+                ];
+                $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+
+            }
+
+
+
+
+
+        }
 
         return $this->redirect(['request/index']);
 

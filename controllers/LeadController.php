@@ -203,8 +203,6 @@ class LeadController extends Controller
 
         $returnCompanyBuyer = UserCompany::find()->where(['user_id'=>(int)$buyer_info->id])->one();
 
-
-
         $collection = Yii::$app->mongo->getCollection('project');
         $list = $collection->aggregate([
             [
