@@ -155,7 +155,7 @@ class OfflineController extends Controller
                 $model->file->saveAs(Yii::getAlias('@webroot/offline/'.$company->_id).'/'.'direct_purchase/'.$model->file->baseName . '.' . $model->file->extension);
 
 
-                $model2->filename = $model->file->name;
+                $model2->filename = $model->file->baseName.'.'.$model->file->extension;
                 $model2->path = '/direct_purchase'.'/'.$model->file->baseName.'.'.$model->file->extension;
                 $model2->company_id = (string)$company->_id;
                 $model2->enter_by = Yii::$app->user->identity->id;
