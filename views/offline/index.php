@@ -23,8 +23,8 @@ $script = <<< JS
 $(document).ready(function(){
 
     $('.uploads').click(function(){
-        $('#modal').modal('show')
-        .find('#modalContent')
+        $('#modalmd').modal('show')
+        .find('#modalContentMd')
         .load($(this).attr('value'));
 
     });

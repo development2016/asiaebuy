@@ -22,67 +22,42 @@ use app\models\GeneratePurchaseOrderNo;
 
 class RequestController extends Controller
 {
+
+
+
     public function actionIndex()
     {
 
         $user_id = Yii::$app->user->identity->id;
         $user = User::find()->where(['id'=>$user_id])->one();
 
+
+         $connection = \Yii::$app->db;
+         $sql = $connection->createCommand('SELECT lookup_role.role AS role FROM acl 
+          RIGHT JOIN acl_menu ON acl.acl_menu_id = acl_menu.id
+          RIGHT JOIN lookup_menu ON acl_menu.menu_id = lookup_menu.menu_id
+          RIGHT JOIN lookup_role ON acl_menu.role_id = lookup_role.role_id
+          WHERE acl.user_id = "'.(int)Yii::$app->user->identity->id.'" GROUP BY lookup_role.role');
+        $getRole = $sql->queryAll(); 
+
+
+        // this function will check whether use have 'Buyer' role or not
+            function in_array_r($needle, $haystack, $strict = false) {
+                foreach ($haystack as $item) {
+                    if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+
+        $info_role = in_array_r('Buyer', $getRole) ? 'Found' : 'Not Found';
+
+
         $collection = Yii::$app->mongo->getCollection('project');
 
-
-        $checkApprover = $collection->aggregate([
-            [
-                '$unwind' => '$sellers'
-            ], 
-            [
-                '$unwind' => '$sellers.approval'
-            ], 
-
-            [
-                '$match' => [
-                    '$and' => [
-                            [
-                                'buyer' => $user->account_name
-                            ],
-                            [
-                                'sellers.approval.status' => 'Waiting Approval'
-                            ],
-                    ],
-
-                    
-                ]
-            ],
-            [
-                '$group' => [
-                    '_id' => '$_id',
-                    'title' => ['$first' => '$title' ],
-                    'sellers' => [
-                        '$push' => [
-                            'approval' => '$sellers.approval',
-
-                            
-                        ],
-                        
-                    ],
-
-
-            
-                ]
-            ],
-
-
-
-        ]);
-
-
-
-
-
-        //$is_have = empty($checkApprover[0]['sellers'][0]['approval']['approval']) ? '' : $checkApprover[0]['sellers'][0]['approval']['approval'];
-
-
-       // $user = ['badru@Buyer1000'=>'badru@Buyer1000','hadi@Buyer1000'=>'hadi@Buyer1000'];
 
 
         $model = $collection->aggregate([
@@ -101,10 +76,15 @@ class RequestController extends Controller
                             [
                                 'sellers.status' => 'Pending Approval'
                             ],
+                            [
+                                'sellers.status' => 'Pass PR to Buyer To Proceed PO'
+                            ],
+
+
                     ],
                     '$and' => [
                             [
-                                'buyer' => $user->account_name
+                                'buyers.buyer' => $user->account_name
                             ],
 
 
@@ -124,7 +104,8 @@ class RequestController extends Controller
                     'url_myspot' => ['$first' => '$url_myspot' ],
                     'type_of_project' => ['$first' => '$type_of_project' ],
                     'quotation_file' => ['$first' => '$quotation_file' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
+                    'requester' => ['$first'=> '$requester'],
                     'project_no' => ['$first' => '$project_no' ],
                     'sellers' => [
                         '$push' => [
@@ -135,7 +116,6 @@ class RequestController extends Controller
                             'seller' => '$sellers.seller',
                             'revise' => '$sellers.revise',
                             'items' => '$sellers.items',
-                            'requester' =>'$sellers.requester',
                             'approver' => '$sellers.approver',
                             'approve_by' => '$sellers.approve_by',
                             'approver_level' => '$sellers.approver_level',
@@ -158,13 +138,16 @@ class RequestController extends Controller
         ]);
 
 
-
         return $this->render('index',[
             'model' => $model,
+            'info_role' => $info_role,
+            'user'=> $user
+
 
         ]);
 
     }
+
 
 
 
@@ -189,9 +172,7 @@ class RequestController extends Controller
     							'sellers.approval.approval' => $user->account_name
     						],
   
-    						[
-    							'sellers.status' => 'Pending Approval'
-    						],
+    				
 					],
 
 					
@@ -207,7 +188,7 @@ class RequestController extends Controller
                     'url_myspot' => ['$first' => '$url_myspot' ],
                     'type_of_project' => ['$first' => '$type_of_project' ],
                     'quotation_file' => ['$first' => '$quotation_file' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     'project_no' => ['$first' => '$project_no' ],
                     'sellers' => [
                         '$push' => [
@@ -1604,7 +1585,7 @@ class RequestController extends Controller
                     'title' => ['$first' => '$title' ],
                     'due_date' => ['$first' => '$due_date' ],
                     'project_no' => ['$first' => '$project_no' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     'sellers' => [
                         '$push' => [
                             'purchase_order_no' => '$sellers.purchase_order_no',
@@ -1629,7 +1610,7 @@ class RequestController extends Controller
         foreach ($list as $key => $value) {
            
             $purchase_order_no = $value['sellers'][0]['purchase_order_no'];
-            $buyer = $value['buyer'];
+            $buyer = $buyer;
 
         }
 
@@ -1735,7 +1716,7 @@ class RequestController extends Controller
                     'title' => ['$first' => '$title' ],
                     'due_date' => ['$first' => '$due_date' ],
                     'project_no' => ['$first' => '$project_no' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     'sellers' => [
                         '$push' => [
                             'purchase_order_no' => '$sellers.purchase_order_no',
@@ -2120,6 +2101,7 @@ class RequestController extends Controller
 
     public function actionChooseBuyer($project,$seller,$buyer)
     {
+
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
         $model = Project::find()->where(['_id'=>$newProject_id])->one();
@@ -2134,7 +2116,7 @@ class RequestController extends Controller
             RIGHT JOIN acl_menu ON acl_menu.id = acl.acl_menu_id
             WHERE acl.company_id ='".$returnCompanyBuyer->company."' AND acl_menu.role_id = 3100
             GROUP BY user.username");
-        $buyer = $sql->queryAll();
+        $buyer_list = $sql->queryAll();
 
 
         if ($model->load(Yii::$app->request->post()) ) {
@@ -2155,7 +2137,8 @@ class RequestController extends Controller
 
                 $arrUpdate = [
                     '$set' => [
-                        'sellers.$.buyer' =>  $tempApp
+                        'buyers' =>  $tempApp,
+                        'sellers.$.status' => 'Pass PR to Buyer To Proceed PO'
 
                     ]
                 
@@ -2170,7 +2153,7 @@ class RequestController extends Controller
         } else {
 
            return $this->renderAjax('choose-buyer',[
-                'buyer' => $buyer,
+                'buyer_list' => $buyer_list,
                 'model' => $model,
 
             ]);

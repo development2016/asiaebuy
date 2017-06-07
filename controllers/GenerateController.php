@@ -472,7 +472,6 @@ class GenerateController extends Controller
                     '$set' => [
                         'date_update' => date('Y-m-d h:i:s'),
                         'update_by' => Yii::$app->user->identity->id,
-                        'sellers.$.requester' => '',
                         'sellers.$.approve_by' => '',
                         'sellers.$.status' => 'Request Approval',
 
@@ -514,7 +513,7 @@ class GenerateController extends Controller
     }
 
 
-    public function actionGenerateDirectPurchaseOrder($project,$seller)
+    public function actionGenerateDirectPurchaseOrder($project,$seller,$buyer)
     {
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
@@ -539,6 +538,9 @@ class GenerateController extends Controller
                 'date_update' => date('Y-m-d h:i:s'),
                 'update_by' => Yii::$app->user->identity->id,
                 'sellers.$.status' => 'Complete',
+                'buyers' => [
+                    ['buyer' => $buyer]
+                ]
 
             ]
         

@@ -71,8 +71,9 @@ class SourceController extends Controller
 					],
                     '$and' => [
                             [
-                                'buyer' => $user->account_name
+                                'buyers.buyer' => $user->account_name
                             ],
+ 
 
                             
                     ],
@@ -90,8 +91,8 @@ class SourceController extends Controller
                     'url_myspot' => ['$first' => '$url_myspot' ],
                     'type_of_project' => ['$first' => '$type_of_project' ],
                     'quotation_file' => ['$first' => '$quotation_file' ],
-                    'buyer' => ['$first' => '$buyer' ],
                     'project_no' => ['$first' => '$project_no' ],
+                    'buyers' => ['$first' => '$buyers'],
                     'sellers' => [
                         '$push' => [
                             'quotation_no' => '$sellers.quotation_no',
@@ -100,7 +101,8 @@ class SourceController extends Controller
                             'seller' => '$sellers.seller',
                             'revise' => '$sellers.revise',
                             'items' => '$sellers.items',
-                            'approver' => '$sellers.approver'
+                            'approver' => '$sellers.approver',
+
                             
                         ],
                         
@@ -119,7 +121,7 @@ class SourceController extends Controller
 
 		]);
 
- 
+
 
         $history = $collection->aggregate([
             [
@@ -137,7 +139,7 @@ class SourceController extends Controller
                     ],
                     '$and' => [
                             [
-                                'buyer' => $user->account_name
+                                'buyers.buyer' => $user->account_name
                             ]
                     ],
 
@@ -159,7 +161,7 @@ class SourceController extends Controller
                     'url_myspot' => ['$first' => '$url_myspot' ],
                     'type_of_project' => ['$first' => '$type_of_project' ],
                     'quotation_file' => ['$first' => '$quotation_file' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    //'buyer' => ['$first' => '$buyer' ],
                     'project_no' => ['$first' => '$project_no' ],
                     'sellers' => [
                         '$push' => [
@@ -943,7 +945,7 @@ class SourceController extends Controller
                     'title' => ['$first' => '$title' ],
                     'due_date' => ['$first' => '$due_date' ],
                     'project_no' => ['$first' => '$project_no' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     'sellers' => [
                         '$push' => [
                             'purchase_requisition_no' => '$sellers.purchase_requisition_no',
@@ -968,7 +970,7 @@ class SourceController extends Controller
         foreach ($list as $key => $value) {
            
             $purchase_requisition_no = $value['sellers'][0]['purchase_requisition_no'];
-            $buyer = $value['buyer'];
+            $buyer = $value['buyers'][0]['buyer'];
 
         }
 
@@ -1074,7 +1076,7 @@ class SourceController extends Controller
                     'title' => ['$first' => '$title' ],
                     'due_date' => ['$first' => '$due_date' ],
                     'project_no' => ['$first' => '$project_no' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     'sellers' => [
                         '$push' => [
                             'purchase_requisition_no' => '$sellers.purchase_requisition_no',
@@ -1144,7 +1146,7 @@ class SourceController extends Controller
                     'due_date' => ['$first' => '$due_date' ],
                     'project_no' => ['$first' => '$project_no' ],
                     'type_of_project' => ['$first' => '$type_of_project' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     'description' => ['$first' => '$description' ],
                     'sellers' => [
                         '$push' => '$sellers'
@@ -1561,13 +1563,11 @@ class SourceController extends Controller
             }
 
 
-
-
                 return $this->redirect([
                     'source/direct-purchase-requisition', 
                     'project' => (string)$newProject_id,
                     'seller'=>$seller,
-                    'buyer' => $process[0]['buyer'],
+                    'buyer' => $process[0]['buyers'][0]['buyer'],
                     'approver' => $approver
                 ]);
             

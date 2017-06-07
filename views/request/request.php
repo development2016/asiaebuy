@@ -237,7 +237,7 @@ $this->registerJs($script);
                                                 <?php foreach ($value['sellers'] as $key => $value2) { ?>
                                                 <tr>
                                                     <td><?php echo $value2['seller'] ?></td>
-                                                    <td><?php echo $value['buyer']; ?></td>
+                                                    <td><?php echo $value['buyers'][0]['buyer']; ?></td>
 
                                                         <?php if ($value2['approver'] == 'level') { ?>
 
@@ -305,7 +305,7 @@ $this->registerJs($script);
                                                                                         <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/guide-purchase-requisition-html',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer' => $value['buyer']
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             ],['target'=>'_blank']) ?>
                                                                                     </li>
 
@@ -340,7 +340,7 @@ $this->registerJs($script);
                                                                                         <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/direct-purchase-requisition-html',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer' => $value['buyer']
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             ],['target'=>'_blank']) ?>
                                                                                     </li>
 
@@ -371,7 +371,7 @@ $this->registerJs($script);
                                                                             <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
                                                                             'project'=>(string)$value['_id'],
                                                                             'seller'=>$value2['seller'],
-                                                                            'buyer' => $value['buyer'],
+                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                             'approver' => $value2['approver'],
                                                                             ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                         </div>
@@ -387,7 +387,7 @@ $this->registerJs($script);
                                                                             <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
                                                                             'project'=>(string)$value['_id'],
                                                                             'seller'=>$value2['seller'],
-                                                                            'buyer' => $value['buyer'],
+                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                             'approver' => $value2['approver'],
                                                                             ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                         </div>
@@ -401,7 +401,7 @@ $this->registerJs($script);
                                                                     <?= Html::a('Purchase Requisition', ['request/sale-purchase-requisition-approve',
                                                                     'project'=>(string)$value['_id'],
                                                                     'seller'=>$value2['seller'],
-                                                                    'buyer' => $value['buyer']
+                                                                    'buyer'=>$value['buyers'][0]['buyer'],
                                                                     ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                 </div>
 
@@ -412,7 +412,7 @@ $this->registerJs($script);
                                                                     <?= Html::a('Purchase Requisition', ['request/spot-purchase-requisition-approve',
                                                                     'project'=>(string)$value['_id'],
                                                                     'seller'=>$value2['seller'],
-                                                                    'buyer' => $value['buyer']
+                                                                    'buyer'=>$value['buyers'][0]['buyer'],
                                                                     ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                 </div>
 
@@ -426,7 +426,7 @@ $this->registerJs($script);
                                                                                 <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
                                                                                 'project'=>(string)$value['_id'],
                                                                                 'seller'=>$value2['seller'],
-                                                                                'buyer' => $value['buyer'],
+                                                                                'buyer'=>$value['buyers'][0]['buyer'],
                                                                                 'approver' => $value2['approver'],
                                                                                 ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                             </div>
@@ -442,7 +442,7 @@ $this->registerJs($script);
                                                                                 <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
                                                                                 'project'=>(string)$value['_id'],
                                                                                 'seller'=>$value2['seller'],
-                                                                                'buyer' => $value['buyer'],
+                                                                                'buyer'=>$value['buyers'][0]['buyer'],
                                                                                 'approver' => $value2['approver'],
                                                                                 ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                             </div>
@@ -472,7 +472,7 @@ $this->registerJs($script);
                                                                                 <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/guide-quotation-html',
                                                                                     'project'=>(string)$value['_id'],
                                                                                     'seller'=>$value2['seller'],
-                                                                                    'buyer' => $value['buyer']
+                                                                                    'buyer'=>$value['buyers'][0]['buyer'],
                                                                                     ],['target'=>'_blank']) ?>
                                                                             </li>
 
@@ -495,7 +495,7 @@ $this->registerJs($script);
                                                                                 <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/sale-quotation-html',
                                                                                     'project'=>(string)$value['_id'],
                                                                                     'seller'=>$value2['seller'],
-                                                                                    'buyer' => $value['buyer']
+                                                                                    'buyer'=>$value['buyers'][0]['buyer'],
                                                                                     ],['target'=>'_blank']) ?>
                                                                             </li>
 
@@ -518,7 +518,7 @@ $this->registerJs($script);
                                                                                 <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/spot-quotation-html',
                                                                                     'project'=>(string)$value['_id'],
                                                                                     'seller'=>$value2['seller'],
-                                                                                    'buyer' => $value['buyer']
+                                                                                    'buyer'=>$value['buyers'][0]['buyer'],
                                                                                     ],['target'=>'_blank']) ?>
                                                                             </li>
 

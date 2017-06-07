@@ -37,7 +37,7 @@ class OfflineController extends Controller
 
         $model3 = new Project();
 
-        $buyer_id = User::find()->where(['id'=>(int)Yii::$app->user->identity->id])->one();
+        $requester_id = User::find()->where(['id'=>(int)Yii::$app->user->identity->id])->one();
 
         if ($model3->load(Yii::$app->request->post()) && $model->load(Yii::$app->request->post()) ) {
 
@@ -70,7 +70,11 @@ class OfflineController extends Controller
                 $model3->type_of_project = 'Direct Purchase';
                 $model3->date_create = date('Y-m-d h:i:s');
                 $model3->enter_by = Yii::$app->user->identity->id;
-                $model3->buyer = $buyer_id->account_name;
+                $model3->requester = $requester_id->account_name;
+                $model3->buyers = [
+                
+                    ['buyer' => $requester_id->account_name]
+                ];
                 $model3->sellers = [[
                     'seller' => $_POST['CompanyOffline']['company_name'],
                     'company_registeration_no' => $_POST['CompanyOffline']['company_registeration_no'],

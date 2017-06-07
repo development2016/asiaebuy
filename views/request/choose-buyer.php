@@ -24,7 +24,7 @@ $this->title = 'Choose Buyer To Assign';
 	<div class="form-group">
 
 		<div class="mt-checkbox-list">
-			<?php foreach ($buyer as $key => $value) { ?>
+			<?php foreach ($buyer_list as $key => $value) { ?>
 		    <label class="mt-checkbox mt-checkbox-outline"> <?php echo $value['account_name'] ?>
 		        <input type="checkbox" value="<?php echo $value['account_name'] ?>" name="Project[sellers][buyer][]">
 		        <span></span>

@@ -51,10 +51,11 @@ class Project extends \yii\mongodb\ActiveRecord
             'project_no',
             'type_of_project',
             'date_create',
-            'buyer',
+            'buyers',
             'enter_by',
             'date_update',
             'url_myspot',
+            'requester',
             'tax_value',
 
         ];
@@ -66,7 +67,7 @@ class Project extends \yii\mongodb\ActiveRecord
     public function rules()
     {
         return [
-            [['description', 'sellers', 'due_date', 'title', 'project_no', 'type_of_project', 'date_create', 'buyer', 'enter_by', 'date_update','url_myspot','tax_value'], 'safe']
+            [['description', 'sellers', 'due_date', 'title', 'project_no', 'type_of_project', 'date_create', 'buyer', 'enter_by', 'date_update','url_myspot','tax_value','requester'], 'safe']
         ];
     }
 
@@ -89,6 +90,7 @@ class Project extends \yii\mongodb\ActiveRecord
             'date_update' => 'Date Update',
             'url_myspot' => 'Url',
             'tax_value' => 'Tax Value',
+            'requester' => 'Requester',
 
         ];
     }

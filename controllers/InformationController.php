@@ -536,7 +536,7 @@ class InformationController extends Controller
                    // 'due_date' => ['$first' => '$due_date' ],
                     //'project_no' => ['$first' => '$project_no' ],
                     //'type_of_project' => ['$first' => '$type_of_project' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     //'description' => ['$first' => '$description' ],
                     'sellers' => [
                         '$push' => '$sellers'
@@ -566,19 +566,19 @@ class InformationController extends Controller
 
             if ($path == 'revise') {
 
-                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
    
             } else if ($path == 'lead') {
 
-                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
 
             } else if ($path == 'spot') {
 
-                return $this->redirect(['lead/spot-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['lead/spot-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
 
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
             }
             
 
@@ -625,7 +625,7 @@ class InformationController extends Controller
                    // 'due_date' => ['$first' => '$due_date' ],
                     //'project_no' => ['$first' => '$project_no' ],
                     //'type_of_project' => ['$first' => '$type_of_project' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     //'description' => ['$first' => '$description' ],
                     'sellers' => [
                         '$push' => '$sellers'
@@ -656,19 +656,19 @@ class InformationController extends Controller
 
             if ($path == 'revise') {
 
-                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
    
             } else if ($path == 'lead') {
 
-                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
                 
             } else if ($path == 'spot') {
 
-                return $this->redirect(['lead/spot-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['lead/spot-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
 
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
             }
 
 
@@ -714,7 +714,7 @@ class InformationController extends Controller
                    // 'due_date' => ['$first' => '$due_date' ],
                     //'project_no' => ['$first' => '$project_no' ],
                     //'type_of_project' => ['$first' => '$type_of_project' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     //'description' => ['$first' => '$description' ],
                     'sellers' => [
                         '$push' => '$sellers'
@@ -767,15 +767,15 @@ class InformationController extends Controller
 
             if ($path == 'revise') {
 
-                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
    
             } else if ($path == 'lead') {
 
-                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
 
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
             }
             
 
@@ -822,7 +822,7 @@ class InformationController extends Controller
                    // 'due_date' => ['$first' => '$due_date' ],
                     //'project_no' => ['$first' => '$project_no' ],
                     //'type_of_project' => ['$first' => '$type_of_project' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     //'description' => ['$first' => '$description' ],
                     'sellers' => [
                         '$push' => '$sellers'
@@ -874,15 +874,15 @@ class InformationController extends Controller
 
             if ($path == 'revise') {
 
-                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
    
             } else if ($path == 'lead') {
 
-                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
 
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
             }
 
 
@@ -934,7 +934,7 @@ class InformationController extends Controller
                    // 'due_date' => ['$first' => '$due_date' ],
                     //'project_no' => ['$first' => '$project_no' ],
                     //'type_of_project' => ['$first' => '$type_of_project' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     //'description' => ['$first' => '$description' ],
                     'sellers' => [
                         '$push' => '$sellers'
@@ -983,15 +983,15 @@ class InformationController extends Controller
 
             if ($path == 'revise') {
 
-                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
    
             } else if ($path == 'lead') {
 
-                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
             
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
             }
 
 
@@ -1041,7 +1041,7 @@ class InformationController extends Controller
                    // 'due_date' => ['$first' => '$due_date' ],
                     //'project_no' => ['$first' => '$project_no' ],
                     //'type_of_project' => ['$first' => '$type_of_project' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     //'description' => ['$first' => '$description' ],
                     'sellers' => [
                         '$push' => '$sellers'
@@ -1091,15 +1091,15 @@ class InformationController extends Controller
 
             if ($path == 'revise') {
 
-                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
    
             } else if ($path == 'lead') {
 
-                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+                return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
             
             } else if ($path == 'direct') {
 
-                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
+                return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
             }
 
             
@@ -1146,7 +1146,7 @@ class InformationController extends Controller
                    // 'due_date' => ['$first' => '$due_date' ],
                     //'project_no' => ['$first' => '$project_no' ],
                     //'type_of_project' => ['$first' => '$type_of_project' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     //'description' => ['$first' => '$description' ],
                     'sellers' => [
                         '$push' => '$sellers'
@@ -1172,7 +1172,7 @@ class InformationController extends Controller
 
         if ($path == 'revise') {
 
-            return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer']]);
+            return $this->redirect(['quote/sale-revise', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer']]);
 
         } else if ($path == 'lead') {
 
@@ -1180,7 +1180,7 @@ class InformationController extends Controller
         } else if ($path == 'direct') {
 
 
-            return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyer'],'approver'=>$approver]);
+            return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
         }
 
 

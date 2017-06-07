@@ -45,7 +45,7 @@ class OrderController extends Controller
                     ],
                     '$and' => [
                             [
-                                'buyer' => $user->account_name
+                                'buyers.buyer' => $user->account_name
                             ]
                     ],
 
@@ -62,7 +62,7 @@ class OrderController extends Controller
                     'url_myspot' => ['$first' => '$url_myspot' ],
                     'type_of_project' => ['$first' => '$type_of_project' ],
                     'quotation_file' => ['$first' => '$quotation_file' ],
-                    'buyer' => ['$first' => '$buyer' ],
+                    'buyers' => ['$first' => '$buyers' ],
                     'project_no' => ['$first' => '$project_no' ],
                     'sellers' => [
                         '$push' => [

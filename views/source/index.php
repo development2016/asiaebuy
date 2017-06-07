@@ -451,7 +451,7 @@ $this->registerJs($script);
                                                                                             'source/choose-approval',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer'=>$value['buyer'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             'type' => 'guide',
                                                      
                                                                                             ]),'class' => 'choose-approval','id'=>'choose-approval','title'=>'Choose Approver']) ?>
@@ -462,7 +462,7 @@ $this->registerJs($script);
                                                                                             'source/choose-approval-level',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer'=>$value['buyer'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             'type' => 'guide',
                                                      
                                                                                             ]),'class' => 'choose-approval-level','id'=>'choose-approval-level','title'=>'Choose Approver By Level']) ?>
@@ -482,7 +482,7 @@ $this->registerJs($script);
                                                                             'project'=>(string)$value['_id'],
                                                                             'seller'=>(string)$value2['seller'],
                                                                             'approver'=>$value2['approver'],
-                                                                            'buyer'=>$value['buyer'],
+                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                             ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                         </div>
 
@@ -500,7 +500,7 @@ $this->registerJs($script);
                                                                         'source/choose-approval',
                                                                         'project'=>(string)$value['_id'],
                                                                         'seller'=>$value2['seller'],
-                                                                        'buyer'=>$value['buyer'],
+                                                                        'buyer'=>$value['buyers'][0]['buyer'],
                                                                         'type' => 'sale',
                                  
                                                                         ]),'class' => 'btn blue btn-sm btn-outline choose-approval','id'=>'choose-approval','title'=>'Purchase Requisition']) ?>
@@ -513,7 +513,7 @@ $this->registerJs($script);
                                                                         <?= Html::a('Purchase Requisition', ['source/sale-purchase-requisition',
                                                                             'project'=>(string)$value['_id'],
                                                                             'seller'=>(string)$value2['seller'],
-                                                                            'buyer'=>$value['buyer'],
+                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                             ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                         </div>
 
@@ -531,7 +531,7 @@ $this->registerJs($script);
                                                                         'source/choose-approval',
                                                                         'project'=>(string)$value['_id'],
                                                                         'seller'=>$value2['seller'],
-                                                                        'buyer'=>$value['buyer'],
+                                                                        'buyer'=>$value['buyers'][0]['buyer'],
                                                                         'type' => 'spot',
                                  
                                                                         ]),'class' => 'btn blue btn-sm btn-outline choose-approval','id'=>'choose-approval','title'=>'Purchase Requisition']) ?>
@@ -544,7 +544,7 @@ $this->registerJs($script);
                                                                     <?= Html::a('Purchase Requisition', ['source/spot-purchase-requisition',
                                                                         'project'=>(string)$value['_id'],
                                                                         'seller'=>(string)$value2['seller'],
-                                                                        'buyer'=>$value['buyer'],
+                                                                        'buyer'=>$value['buyers'][0]['buyer'],
                                                                         ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                     </div>
 
@@ -568,7 +568,7 @@ $this->registerJs($script);
                                                                                             'source/choose-approval',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer'=>$value['buyer'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             'type' => 'direct',
                                                      
                                                                                             ]),'class' => 'choose-approval','id'=>'choose-approval','title'=>'Choose Approver']) ?>
@@ -579,7 +579,7 @@ $this->registerJs($script);
                                                                                             'source/choose-approval-level',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer'=>$value['buyer'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             'type' => 'direct',
                                                      
                                                                                             ]),'class' => 'choose-approval-level','id'=>'choose-approval-level','title'=>'Choose Approver By Level']) ?>
@@ -600,7 +600,7 @@ $this->registerJs($script);
                                                                         'project'=>(string)$value['_id'],
                                                                         'seller'=>(string)$value2['seller'],
                                                                         'approver'=>$value2['approver'],
-                                                                        'buyer'=>$value['buyer'],
+                                                                        'buyer'=>$value['buyers'][0]['buyer'],
                                                                         ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                                     </div>
 
@@ -631,7 +631,7 @@ $this->registerJs($script);
                                                                                         <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/guide-quotation-html',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer' => $value['buyer']
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             ],['target'=>'_blank']) ?>
                                                                                     </li>
                                                                                     <?php if (empty($value2['revise'])) { ?>
@@ -680,7 +680,7 @@ $this->registerJs($script);
                                                                                         <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/sale-quotation-html',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer' => $value['buyer']
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             ],['target'=>'_blank']) ?>
                                                                                     </li>
                                                                                     <?php if (empty($value2['revise'])) { ?>
@@ -728,7 +728,7 @@ $this->registerJs($script);
                                                                                         <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/spot-quotation-html',
                                                                                             'project'=>(string)$value['_id'],
                                                                                             'seller'=>$value2['seller'],
-                                                                                            'buyer' => $value['buyer']
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
                                                                                             ],['target'=>'_blank']) ?>
                                                                                     </li>
                                                                                     <?php if (empty($value2['revise'])) { ?>
@@ -789,164 +789,6 @@ $this->registerJs($script);
 
 
 
-                            <table class="table table-striped table-bordered "  id="history" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th class="uppercase">No</th>
-                                        <th class="uppercase">Project No</th>
-                                        <th class="none"></th>
-                                        <th class="uppercase">Type Of Project</th>
-                                        <th class="uppercase">Details</th>
-                                        <th class="uppercase">Infomation</th>
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $i=0; foreach ($history as $key => $value_history) { $i++; ?>
-                       
-                                    <tr>
-                                        <td><?php echo $i; ?></td>
-                                        <td><?php echo $value_history['project_no']; ?></td>
-                                        <td>
-                                            
-                                        <?php if ($value_history['type_of_project'] == 'Guide Buying') { ?>
-
-                                            <?php foreach ($value_history['sellers'] as $key => $value2_history) { ?>
-                                                <?php foreach ($value2_history['items'] as $key3 => $value3_history) { ?>
-                                                    <table class="table table-striped table-bordered">
-                                                        <tr>
-                                                            <th style="background-color: #ecf6ff;">Item Name</th>
-                                                            <td><?php echo $value3_history['item_name']; ?></td>
-                                                            <th style="background-color: #ecf6ff;">Brand</th>
-                                                            <td>
-                                                                <?php $brand = LookupBrand::find()->where(['id'=>$value3_history['brand']])->one();
-                                                                echo $brand->brand;
-                                                                 ?> 
-                                                            </td>
-                                                            <th style="background-color: #ecf6ff;">Model</th>
-                                                            <td>
-                                                                <?php $mdl = LookupModel::find()->where(['id'=>$value3_history['model']])->one();
-                                                                echo $mdl->model;
-                                                                 ?>
-                                                            </td>
-                                                
-                                                        </tr>
-                                                        <tr>
-                                                            <th style="background-color: #ecf6ff;">Specification </th>
-                                                            <td><?php echo $value3_history['specification']; ?></td>
-                                                            <th style="background-color: #ecf6ff;">Description </th>
-                                                            <td colspan="3"><?php echo $value3_history['description']; ?></td>
-
-
-                                                        </tr>
-                                                    </table>
-                                                    
-                                                <?php } ?>
-
-                                            <?php } ?>
-
-
-
-
-                                        <?php } elseif ($value_history['type_of_project'] == 'Sale Lead') { ?>
-                                            No Item Added
-
-                                        <?php } elseif ($value_history['type_of_project'] == 'MySpot Buy') { ?>
-                                            No Item Added
-
-                                        <?php } ?>
-
-
-                          
-                                        </td>
-                                        <td>
-                                                <?php if ($value_history['type_of_project'] == 'MySpot Buy') { ?>
-                                                    <span class="label bg-yellow-casablanca"> <?php echo $value_history['type_of_project']; ?> </span>
-                                                <?php } elseif ($value_history['type_of_project'] == 'Guide Buying') { ?>
-                                                    <span class="label bg-red-sunglo"> <?php echo $value_history['type_of_project']; ?> </span>
-                                                <?php } elseif ($value_history['type_of_project'] == 'Sale Lead') { ?>
-                                                    <span class="label bg-blue-steel"> <?php echo $value_history['type_of_project']; ?> </span>
-                                                <?php } elseif ($value_history['type_of_project'] == 'Direct Purchase') { ?>
-                                                    <span class="label bg-green-jungle"> <?php echo $value_history['type_of_project']; ?> </span>
-                                                <?php } else {} ?>
-
-                                         </td>
-                                        <td>
-                                                <ul>
-                                                    <li><b>Title</b> : <?= $value_history['title']; ?></li>
-                                                    <li><b>Description</b> : <?= $value_history['description']; ?></li>
-                                                    <li><b>Due Date</b> : <?= $value_history['due_date']; ?></li>
-                                                    <li><b>Date Create</b> : <?= $value_history['date_create']; ?></li>
-
-                                                </ul>
-
-                                                <?php if ($value_history['type_of_project'] == 'MySpot Buy') { ?>
-                                                <ul>
-                                                    <li><b>Website</b> : <a href="<?= $value_history['url_myspot']; ?>" target="_blank"><?= $value_history['url_myspot']; ?></a> </li>
-                                                </ul>     
-                                                <?php } else { ?>
-
-                                                <?php } ?>
-
-
- 
-
-                                        </td>
-                                        <td>
-                                            <table class="table table-bordered " >
-                                                <tr style="background-color: #ecf6ff;">
-                                                    <th class="uppercase">Seller Name</th>
-                                                    <th class="uppercase">Action</th>
-                                                </tr>
-                                                <?php foreach ($value_history['sellers'] as $key => $value2_history) { ?>
-                                                <tr>
-                                                    <td><?php echo $value2_history['seller'] ?></td>
-                                                    <td>
-                                                        <?php foreach ($value2_history['history'] as $key => $value3_history) { ?>
-
-                                                            <?php if ($value_history['type_of_project'] == 'Guide Buying') { ?>
-
-
-                                                                <div class="margin-bottom-5">
-
-                                                                        <div class="btn-group">
-                                                                            <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
-                                                                                <i class="fa fa-angle-down"></i>
-                                                                            </a>
-                                                                            <ul class="dropdown-menu">
-                                                                                <li>
-                                                                                    <?= Html::a('<b>'.$value3_history['quotation_no'].'</b>', ['html/guide-quotation-html',
-                                                                                        'project'=>(string)$value_history['_id'],
-                                                                                        'seller'=>$value2_history['seller'],
-                                                                                        'buyer' => $value_history['buyer']
-                                                                                        ],['target'=>'_blank']) ?>
-                                                                                </li>
-
-                                      
-                                                                            </ul>
-                                                                        </div>
-
-                                                                </div>
-
-
-
-
-                                                            <?php } ?>
-
-                                                        <?php } ?>
-                                                    </td>
-
-                                                </tr>
-                                                <?php } ?>
-                   
-                                            </table>
-                                            
-                                        </td>
-                                    </tr>
-                                
-                                   <?php } ?>
-                                   </tbody>
-                            </table>
 
 
 

@@ -9,6 +9,18 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use app\models\LookupModel;
 use app\models\LookupBrand;
+use app\models\LookupCountry;
+use app\models\LookupState;
+
+
+
+
+$country = LookupCountry::find()->where(['id'=>$list[0]['sellers'][0]['warehouses'][0]['country']])->one();
+$state = LookupState::find()->where(['id'=>$list[0]['sellers'][0]['warehouses'][0]['state']])->one();
+
+
+
+
 
 $this->title = 'Purchase Requisition';
 
@@ -104,7 +116,7 @@ $amount = $sumAmount = $install = $showInstall = $sumInstall = $shipping = $show
                                         <h4>
                                             <?= $list[0]['sellers'][0]['warehouses'][0]['warehouse_name'] ?>
                                             <br>
-                                            <?= $list[0]['sellers'][0]['warehouses'][0]['address'] ?>,<?= $list[0]['sellers'][0]['warehouses'][0]['state'] ?>,<?= $list[0]['sellers'][0]['warehouses'][0]['country'] ?>
+                                            <?= $list[0]['sellers'][0]['warehouses'][0]['address'] ?>,<?= $state->state ?>,<?= $country->country ?>
                                             <br>
                                             <label class="bold">P.I.C : </label> <?= $list[0]['sellers'][0]['warehouses'][0]['person_in_charge'] ?>
                                             <br>
