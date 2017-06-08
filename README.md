@@ -11,6 +11,12 @@ value RM8000
   - if by level
     - put maximum level
       - select approval
+      -- ajax checkin  , company name, registerration no, username
+
+
+
+
+
       
 
 
