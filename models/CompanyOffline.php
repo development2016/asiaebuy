@@ -95,7 +95,7 @@ class CompanyOffline extends \yii\mongodb\ActiveRecord
             'fax_no' => 'Fax No',
             'email' => 'Email',
             'website' => 'Website',
-            'gst' => 'Gst',
+            'gst' => 'Tax',
         ];
     }
 }

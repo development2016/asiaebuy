@@ -532,6 +532,7 @@ $amount = $sumAmount = $install = $showInstall = $sumInstall = $shipping = $show
                         'seller'=>$seller,
                         'project'=> (string)$project,
                         'approver'=>$approver,
+                        'buyer'=> $buyer,
                         ], [
                         'class' => 'btn btn-lg blue hidden-print uppercase print-btn mt-ladda-btn ladda-button',
                         'data-style' => 'slide-up'

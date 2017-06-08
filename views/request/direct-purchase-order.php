@@ -347,6 +347,9 @@ $amount = $sumAmount = $install = $showInstall = $sumInstall = $shipping = $show
                 <div class="row">
                     <div class="col-xs-12">
 
+
+                        <?php pri
+
                         <?= Html::a('<span class="ladda-label">Submit PO</span>', [
                         'generate/generate-direct-purchase-order',
                         'seller'=>$seller,

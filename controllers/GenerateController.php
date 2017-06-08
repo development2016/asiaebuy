@@ -16,6 +16,8 @@ use app\models\LookupTerm;
 use app\models\LookupCountry;
 use app\models\LookupState;
 use app\models\AsiaebuyCompany;
+use app\models\User;
+use app\models\UserCompany;
 
 class GenerateController extends Controller
 {
@@ -418,8 +420,27 @@ class GenerateController extends Controller
  // START FOR DIRECT PURCHASE GENERATE QUOTATION / PURCHASE REQUISITION / PURCHASE ORDER / DELIVERY ORDER / INVOICE
 
 
-    public function actionGenerateDirectPurchaseRequisition($project,$seller,$approver)
+    public function actionGenerateDirectPurchaseRequisition($project,$seller,$approver,$buyer)
     {
+
+        $buyer_id = User::find()->where(['account_name'=>$buyer])->one();
+
+        $returnCompanyBuyer = UserCompany::find()->where(['user_id'=>$buyer_id->id])->one();
+
+
+        $collection = Yii::$app->mongo->getCollection('company');
+        $company = $collection->aggregate([
+            [
+                '$match' => [
+                    '_id' => (string)$returnCompanyBuyer->company,
+
+                ]
+            ],
+
+        ]); 
+
+
+
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
         $collection = Yii::$app->mongo->getCollection('project');
@@ -436,73 +457,187 @@ class GenerateController extends Controller
 
         ]); 
 
-        if ($approver == 'level') {
 
-                $collection = Yii::$app->mongo->getCollection('project');
-                $arrUpdate = [
-                    '$set' => [
-                        'date_update' => date('Y-m-d h:i:s'),
-                        'update_by' => Yii::$app->user->identity->id,
-                        'sellers.$.status' => 'Request Approval',
-                        'sellers.$.approval.0.status' => 'Waiting Approval',
-                        'sellers.$.approver_level' => $model[0]['sellers']['approval'][0]['approval'],
+        if (empty($model[0]['sellers']['warehouses'])) {
 
 
-                    ]
-                
-                ];
-                $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+            if ($approver == 'level') {
 
-        } else {
-
-             $connection = \Yii::$app->db;
-             $sql = $connection->createCommand('SELECT lookup_menu.as_a AS as_a,acl.user_id AS id_user,lookup_role.role AS role FROM acl 
-              RIGHT JOIN acl_menu ON acl.acl_menu_id = acl_menu.id
-              RIGHT JOIN lookup_menu ON acl_menu.menu_id = lookup_menu.menu_id
-              RIGHT JOIN lookup_role ON acl_menu.role_id = lookup_role.role_id
-              WHERE acl.user_id = "'.(int)Yii::$app->user->identity->id.'" GROUP BY lookup_role.role');
-            $getRole = $sql->queryAll(); 
-
-
-            if ($getRole[0]['role'] == 'User') {
-
-
-                $collection = Yii::$app->mongo->getCollection('project');
-                $arrUpdate = [
-                    '$set' => [
-                        'date_update' => date('Y-m-d h:i:s'),
-                        'update_by' => Yii::$app->user->identity->id,
-                        'sellers.$.approve_by' => '',
-                        'sellers.$.status' => 'Request Approval',
+                    $collection = Yii::$app->mongo->getCollection('project');
+                    $arrUpdate = [
+                        '$set' => [
+                            'date_update' => date('Y-m-d h:i:s'),
+                            'update_by' => Yii::$app->user->identity->id,
+                            'sellers.$.status' => 'Request Approval',
+                            'sellers.$.approval.0.status' => 'Waiting Approval',
+                            'sellers.$.approver_level' => $model[0]['sellers']['approval'][0]['approval'],
+                            'sellers.$.warehouses' => [[
+                                'person_in_charge' => $buyer_id->username,
+                                'contact' => $company[0]['telephone_no'],
+                                'country' => $company[0]['country'],
+                                'state' => $company[0]['state'],
+                                'location' => $company[0]['city'],
+                                'warehouse_name' => $company[0]['company_name'],
+                                'address' => $company[0]['address'],
+                                'latitude' => 0,
+                                'longitude' => 0,
+                            ]],
 
 
-                    ]
-                
-                ];
-                $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+                        ]
+                    
+                    ];
+                    $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
 
-             
             } else {
 
+                 $connection = \Yii::$app->db;
+                 $sql = $connection->createCommand('SELECT lookup_menu.as_a AS as_a,acl.user_id AS id_user,lookup_role.role AS role FROM acl 
+                  RIGHT JOIN acl_menu ON acl.acl_menu_id = acl_menu.id
+                  RIGHT JOIN lookup_menu ON acl_menu.menu_id = lookup_menu.menu_id
+                  RIGHT JOIN lookup_role ON acl_menu.role_id = lookup_role.role_id
+                  WHERE acl.user_id = "'.(int)Yii::$app->user->identity->id.'" GROUP BY lookup_role.role');
+                $getRole = $sql->queryAll(); 
 
-                $collection = Yii::$app->mongo->getCollection('project');
-                $arrUpdate = [
-                    '$set' => [
-                        'date_update' => date('Y-m-d h:i:s'),
-                        'update_by' => Yii::$app->user->identity->id,
-                        'sellers.$.status' => 'Request Approval',
-                        'sellers.$.approve_by' => '',
+
+                if ($getRole[0]['role'] == 'User') {
 
 
-                    ]
-                
-                ];
-                $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+                    $collection = Yii::$app->mongo->getCollection('project');
+                    $arrUpdate = [
+                        '$set' => [
+                            'date_update' => date('Y-m-d h:i:s'),
+                            'update_by' => Yii::$app->user->identity->id,
+                            'sellers.$.approve_by' => '',
+                            'sellers.$.status' => 'Request Approval',
+                            'sellers.$.warehouses' => [[
+                                'person_in_charge' => $buyer_id->username,
+                                'contact' => $company[0]['telephone_no'],
+                                'country' => $company[0]['country'],
+                                'state' => $company[0]['state'],
+                                'location' => $company[0]['city'],
+                                'warehouse_name' => $company[0]['company_name'],
+                                'address' => $company[0]['address'],
+                                'latitude' => 0,
+                                'longitude' => 0,
+                            ]],
 
+
+                        ]
+                    
+                    ];
+                    $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+                 
+                } else {
+
+
+                    $collection = Yii::$app->mongo->getCollection('project');
+                    $arrUpdate = [
+                        '$set' => [
+                            'date_update' => date('Y-m-d h:i:s'),
+                            'update_by' => Yii::$app->user->identity->id,
+                            'sellers.$.status' => 'Request Approval',
+                            'sellers.$.approve_by' => '',
+                            'sellers.$.warehouses' => [[
+                                'person_in_charge' => $buyer_id->username,
+                                'contact' => $company[0]['telephone_no'],
+                                'country' => $company[0]['country'],
+                                'state' => $company[0]['state'],
+                                'location' => $company[0]['city'],
+                                'warehouse_name' => $company[0]['company_name'],
+                                'address' => $company[0]['address'],
+                                'latitude' => 0,
+                                'longitude' => 0,
+                            ]],
+
+
+
+                        ]
+                    
+                    ];
+                    $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+
+                }
 
             }
 
 
+
+        } else {
+
+            if ($approver == 'level') {
+
+                    $collection = Yii::$app->mongo->getCollection('project');
+                    $arrUpdate = [
+                        '$set' => [
+                            'date_update' => date('Y-m-d h:i:s'),
+                            'update_by' => Yii::$app->user->identity->id,
+                            'sellers.$.status' => 'Request Approval',
+                            'sellers.$.approval.0.status' => 'Waiting Approval',
+                            'sellers.$.approver_level' => $model[0]['sellers']['approval'][0]['approval'],
+
+
+                        ]
+                    
+                    ];
+                    $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+            } else {
+
+                 $connection = \Yii::$app->db;
+                 $sql = $connection->createCommand('SELECT lookup_menu.as_a AS as_a,acl.user_id AS id_user,lookup_role.role AS role FROM acl 
+                  RIGHT JOIN acl_menu ON acl.acl_menu_id = acl_menu.id
+                  RIGHT JOIN lookup_menu ON acl_menu.menu_id = lookup_menu.menu_id
+                  RIGHT JOIN lookup_role ON acl_menu.role_id = lookup_role.role_id
+                  WHERE acl.user_id = "'.(int)Yii::$app->user->identity->id.'" GROUP BY lookup_role.role');
+                $getRole = $sql->queryAll(); 
+
+
+                if ($getRole[0]['role'] == 'User') {
+
+
+                    $collection = Yii::$app->mongo->getCollection('project');
+                    $arrUpdate = [
+                        '$set' => [
+                            'date_update' => date('Y-m-d h:i:s'),
+                            'update_by' => Yii::$app->user->identity->id,
+                            'sellers.$.approve_by' => '',
+                            'sellers.$.status' => 'Request Approval',
+
+
+                        ]
+                    
+                    ];
+                    $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+                 
+                } else {
+
+
+                    $collection = Yii::$app->mongo->getCollection('project');
+                    $arrUpdate = [
+                        '$set' => [
+                            'date_update' => date('Y-m-d h:i:s'),
+                            'update_by' => Yii::$app->user->identity->id,
+                            'sellers.$.status' => 'Request Approval',
+                            'sellers.$.approve_by' => '',
+
+
+                        ]
+                    
+                    ];
+                    $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+
+                }
+
+
+
+
+
+            }
 
 
 

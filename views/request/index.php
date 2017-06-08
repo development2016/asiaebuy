@@ -369,6 +369,41 @@ $this->registerJs($script);
                                                                 ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
                                                             </div>
 
+
+                                                        <?php } elseif ($value2['status'] == 'PO In Progress') { ?>
+
+
+                                                                <div class="margin-bottom-5">
+                                                                    <?= Html::a('Purchase Order', ['request/direct-purchase-order',
+                                                                    'project'=>(string)$value['_id'],
+                                                                    'seller'=>$value2['seller'],
+                                                                    'buyer'=>$value['buyers'][0]['buyer'],
+                                                                    ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Order']) ?>
+                                                                </div>   
+
+
+
+                                                            <div class="margin-bottom-5">
+
+                                                                    <div class="btn-group">
+                                                                        <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Purchase Requisition
+                                                                            <i class="fa fa-angle-down"></i>
+                                                                        </a>
+                                                                        <ul class="dropdown-menu">
+                                         
+                                                                            <li>
+                                                                                <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/guide-purchase-requisition-html',
+                                                                                    'project'=>(string)$value['_id'],
+                                                                                    'seller'=>$value2['seller'],
+                                                                                    'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                    ],['target'=>'_blank']) ?>
+                                                                            </li>
+
+                                  
+                                                                        </ul>
+                                                                    </div>
+
+                                                            </div>
                                                          
 
 
@@ -488,6 +523,38 @@ $this->registerJs($script);
                                                                 <!-- if user have role buyer can proceed to PO -->
                                                                 <?php if ($info_role == 'Found') { ?>
 
+                                                                    <?php if ($info_role_2 == 'Found') { ?>
+
+                                                                        <?php if ($value2['temp_status'] == 'Change Buyer') { ?>
+                                                                          
+                                                                        <?php } else { ?>
+
+
+                                                                           <div class="margin-bottom-5">
+                                                                            <?= Html::a('Submit To Buyer',FALSE, ['value'=>Url::to([
+                                                                            'request/choose-buyer',
+                                                                            'project'=>(string)$value['_id'],
+                                                                            'seller'=>$value2['seller'],
+                                                                            'buyer'=>$value['buyers'][0]['buyer'],
+                                                                            'role'=>'buyer'
+                                                           
+                                     
+                                                                            ]),'class' => 'btn blue btn-sm btn-outline choose-buyer','id'=>'choose-buyer','title'=>'Purchase Requisition']) ?>
+                                                                            </div>
+
+
+                                                                        <?php } ?>
+
+
+
+
+
+
+                                                             
+                                                                    <?php } ?>
+
+
+
                                                                     <div class="margin-bottom-5">
                                                                         <?= Html::a('Proceed To Purchase Order', ['request/direct-purchase-order',
                                                                         'project'=>(string)$value['_id'],
@@ -504,6 +571,7 @@ $this->registerJs($script);
                                                                     'project'=>(string)$value['_id'],
                                                                     'seller'=>$value2['seller'],
                                                                     'buyer'=>$value['buyers'][0]['buyer'],
+                                                                    'role'=>'user'
                                                    
                              
                                                                     ]),'class' => 'btn blue btn-sm btn-outline choose-buyer','id'=>'choose-buyer','title'=>'Purchase Requisition']) ?>

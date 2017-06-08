@@ -63,8 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="btn-group btn-group-devided" >
 
 
-                    <?= Html::a('Upload Quotation <i class="fa fa-upload"></i>',FALSE, ['value'=>Url::to(['offline/upload']),'class' => 'btn blue-steel btn-outline btn-sm uploads','id'=>'','title'=>'Upload Image']) ?>
-                	<?= Html::a('Remove <i class="fa fa-trash"></i>', ['project/spot'],['class'=>'btn red-sunglo btn-outline btn-sm','title'=>'Remove Image']) ?>
+                    <?= Html::a('Upload File <i class="fa fa-upload"></i>',FALSE, ['value'=>Url::to(['offline/upload']),'class' => 'btn blue-steel btn-outline btn-sm uploads','id'=>'','title'=>'Upload Image']) ?>
 
                 </div>
             </div>
@@ -74,13 +73,45 @@ $this->params['breadcrumbs'][] = $this->title;
 	        </div>
 	        <div class="portlet-body">
 
-	        <?php if (empty($model2->filename)) { ?>
-	        
-	        <?php } else { ?>
+	        <table class="table">
+	        <tr>
+	        	<th>Filename</th>
+	        	<th>Path</th>
+	        	<th>Date Create</th>
+	        	<th>Action</th>
+	        </tr>
+	       	<?php foreach ($model2 as $key => $value) { ?>
+	       	<tr>
+	       		<td><?= $value['filename']; ?></td>
+	       		<td><?= $value['path']; ?></td>
+	       		<td><?= $value['date_create']; ?></td>
+	       		<td>
+	       			<div class="margin-bottom-5">
 
-	        	<img src="<?php echo Yii::$app->request->baseUrl;?>/offline/<?php echo $model2->company_id ?>/direct_purchase/<?php echo $model2->filename ?>" class="img-responsive" alt="" />
+	       			<?= Html::a('View', ['view', 
+	       				'id' => $value->id,
+	       				'filename' => $value->filename,
+	       				], ['class' => 'btn blue btn-sm btn-outline','title'=>'View Upload File']) ?>
+
+	       				
+	       			</div>
+	       			<div class="margin-bottom-5">
+	       			<?= Html::a('Delete', ['delete', 
+	       				'id' => $value->id,
+	       				'filename' => $value->filename,
+	       				'path'=>$value->path,
+	       				'company_id' => $value->company_id
+	       				], ['class' => 'btn blue btn-sm btn-outline','title'=>'Remove Upload File']) ?>
+	       			</div>
+	       		</td>
+	       	</tr>
 
 	        <?php } ?>
+	        </table>
+
+
+
+
 	   
 	        </div>
 	    </div>
@@ -125,25 +156,19 @@ $this->params['breadcrumbs'][] = $this->title;
 					            ]
 					    ]);?>
 
-				        <?php if (empty($model2->filename)) { ?>
-				        
-				        <?php } else { ?>
 
-				        	<?= $form->field($model3, 'sellers[quotation]')->hiddenInput(['value'=>$model2->company_id.$model2->path])->label(false) ?>
 
-				        	<?= $form->field($model3, 'direct_purchase[company_id]')->hiddenInput(['value'=>$model2->company_id])->label(false) ?>
 
-				        	<?= $form->field($model3, 'direct_purchase[filename]')->hiddenInput(['value'=>$model2->filename])->label(false) ?>
 
-				        	<?= $form->field($model3, 'direct_purchase[path]')->hiddenInput(['value'=>$model2->path])->label(false) ?>
+				       	<?php foreach ($model2 as $key => $value) { ?>
 
-				        	<?= $form->field($model3, 'direct_purchase[enter_by]')->hiddenInput(['value'=>$model2->enter_by])->label(false) ?>
-
-				        	<?= $form->field($model3, 'direct_purchase[id]')->hiddenInput(['value'=>$model2->id])->label(false) ?>
-
+				       	<?= $form->field($model3, 'document[filename][]')->hiddenInput(['value'=>$value['filename']])->label(false) ?>
+				       	<?= $form->field($model3, 'document[path][]')->hiddenInput(['value'=>$value['path']])->label(false) ?>
+				       	<?= $form->field($model3, 'document[company_id][]')->hiddenInput(['value'=>$value['company_id']])->label(false) ?>
+				       	<?= $form->field($model3, 'document[date_create][]')->hiddenInput(['value'=>$value['date_create']])->label(false) ?>
+		
 
 				        <?php } ?>
-
 
 
 					    
@@ -189,7 +214,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 						    <?= $form->field($model, 'website') ?>
 
-						    <?= $form->field($model, 'gst') ?>
+						    <?= $form->field($model, 'gst')->textInput(['value'=>'6']) ?>
 
 	                        <?= $form->field($model, 'term')->dropDownList(
 	                            $term, 

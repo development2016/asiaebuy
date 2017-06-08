@@ -32,7 +32,7 @@ class Uploads extends \yii\db\ActiveRecord
         return [
             [['enter_by'], 'integer'],
             [['date_create'], 'safe'],
-            [['filename', 'path', 'company_id'], 'string', 'max' => 255],
+            [['filename', 'path', 'company_id','extension'], 'string', 'max' => 255],
         ];
     }
 
@@ -48,6 +48,7 @@ class Uploads extends \yii\db\ActiveRecord
             'company_id' => 'Company ID',
             'enter_by' => 'Enter By',
             'date_create' => 'Date Create',
+            'extension' => 'Extension'
         ];
     }
 }

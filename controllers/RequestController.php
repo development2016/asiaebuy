@@ -40,7 +40,6 @@ class RequestController extends Controller
           WHERE acl.user_id = "'.(int)Yii::$app->user->identity->id.'" GROUP BY lookup_role.role');
         $getRole = $sql->queryAll(); 
 
-
         // this function will check whether use have 'Buyer' role or not
             function in_array_r($needle, $haystack, $strict = false) {
                 foreach ($haystack as $item) {
@@ -54,6 +53,7 @@ class RequestController extends Controller
 
 
         $info_role = in_array_r('Buyer', $getRole) ? 'Found' : 'Not Found';
+        $info_role_2 = in_array_r('User', $getRole) ? 'Found' : 'Not Found';
 
 
         $collection = Yii::$app->mongo->getCollection('project');
@@ -79,6 +79,13 @@ class RequestController extends Controller
                             [
                                 'sellers.status' => 'Pass PR to Buyer To Proceed PO'
                             ],
+                            [
+                                'sellers.temp_status' => 'Change Buyer'
+                            ],
+                            [
+                                'sellers.status' => 'PO In Progress'
+                            ],
+
 
 
                     ],
@@ -117,6 +124,7 @@ class RequestController extends Controller
                             'revise' => '$sellers.revise',
                             'items' => '$sellers.items',
                             'approver' => '$sellers.approver',
+                            'temp_status' => '$sellers.temp_status',
                             'approve_by' => '$sellers.approve_by',
                             'approver_level' => '$sellers.approver_level',
                             
@@ -138,9 +146,12 @@ class RequestController extends Controller
         ]);
 
 
+
+
         return $this->render('index',[
             'model' => $model,
             'info_role' => $info_role,
+            'info_role_2' => $info_role_2,
             'user'=> $user
 
 
@@ -1678,6 +1689,8 @@ class RequestController extends Controller
                 'update_by' => Yii::$app->user->identity->id,
                 'sellers.$.purchase_order_no' => $purchase_order_no,
                 'sellers.$.date_purchase_order' => date('Y-m-d H:i:s'),
+                'sellers.$.status' => 'PO In Progress',
+                'sellers.$.PO_process_by' => $buyer,
 
             ]
         
@@ -1725,7 +1738,8 @@ class RequestController extends Controller
                             'items' => '$sellers.items',
                             'seller' => '$sellers.seller',
                             'tax' => '$sellers.tax',
-                             'warehouses' => '$sellers.warehouses'
+                            'warehouses' => '$sellers.warehouses',
+                            'PO_process_by' => '$sellers.PO_process_by'
                         ],
                         
                     ],
@@ -2099,7 +2113,7 @@ class RequestController extends Controller
 
 
 
-    public function actionChooseBuyer($project,$seller,$buyer)
+    public function actionChooseBuyer($project,$seller,$buyer,$role)
     {
 
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
@@ -2111,15 +2125,38 @@ class RequestController extends Controller
         $returnCompanyBuyer = UserCompany::find()->where(['user_id'=>$buyer_info->id])->one();
 
         $connection = \Yii::$app->db;
-        $sql = $connection->createCommand("SELECT * FROM acl 
-            RIGHT JOIN user ON acl.user_id = user.id
-            RIGHT JOIN acl_menu ON acl_menu.id = acl.acl_menu_id
-            WHERE acl.company_id ='".$returnCompanyBuyer->company."' AND acl_menu.role_id = 3100
-            GROUP BY user.username");
-        $buyer_list = $sql->queryAll();
+
+        if ($role == 'user') {
+
+            $sql = $connection->createCommand("SELECT * FROM acl 
+                RIGHT JOIN user ON acl.user_id = user.id
+                RIGHT JOIN acl_menu ON acl_menu.id = acl.acl_menu_id
+                WHERE acl.company_id ='".$returnCompanyBuyer->company."' AND acl_menu.role_id = 3100
+
+                GROUP BY user.username");
+            $buyer_list = $sql->queryAll();
+
+
+        } elseif ($role == 'buyer') {
+
+            $sql = $connection->createCommand("SELECT * FROM acl 
+                RIGHT JOIN user ON acl.user_id = user.id
+                RIGHT JOIN acl_menu ON acl_menu.id = acl.acl_menu_id
+                WHERE acl.company_id ='".$returnCompanyBuyer->company."' AND acl_menu.role_id = 3100 AND acl.user_id != '".Yii::$app->user->identity->id."'
+
+                GROUP BY user.username");
+            $buyer_list = $sql->queryAll();
+
+
+
+
+        }
+
 
 
         if ($model->load(Yii::$app->request->post()) ) {
+
+            if ($role == 'user') {
 
                 foreach ($_POST['Project']['sellers']['buyer'] as $key => $value) {
                     
@@ -2146,6 +2183,41 @@ class RequestController extends Controller
 
 
             $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+
+            } elseif ($role == 'buyer') {
+
+                foreach ($_POST['Project']['sellers']['buyer'] as $key => $value) {
+                    
+                    $tempApp[] = [
+                        'buyer' => $value,
+            
+                    ];
+
+                   
+
+                }
+
+
+                $collection = Yii::$app->mongo->getCollection('project');
+
+                $arrUpdate = [
+                    '$set' => [
+                        'buyers' =>  $tempApp,
+                        'from_buyer' => $buyer,
+                        'sellers.$.temp_status' => 'Change Buyer'
+
+                    ]
+                
+                ];
+
+
+            $collection->update(['_id' => $newProject_id,'sellers.seller' => $seller],$arrUpdate);
+
+
+
+            }
+
             
 
              return $this->redirect(['request/index']);

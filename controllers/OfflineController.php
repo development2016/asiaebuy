@@ -16,6 +16,7 @@ use app\models\LookupState;
 use app\models\UploadForm;
 use yii\web\UploadedFile;
 use app\models\Uploads;
+use yii\data\ActiveDataProvider;
 
 class OfflineController extends Controller
 {
@@ -26,13 +27,14 @@ class OfflineController extends Controller
 
 		$model = new CompanyOffline();
 
-        $model2 = Uploads::find()->where(
-            [
-                'enter_by'=>Yii::$app->user->identity->id,
 
+        $model2 = Uploads::find()->where([
+                'enter_by'=>Yii::$app->user->identity->id,
+                'date_create' => $today
             ]
         )
-        ->orderBy(['id' => SORT_DESC])->limit(1)->one();
+        ->all();
+
 
 
         $model3 = new Project();
@@ -40,6 +42,9 @@ class OfflineController extends Controller
         $requester_id = User::find()->where(['id'=>(int)Yii::$app->user->identity->id])->one();
 
         if ($model3->load(Yii::$app->request->post()) && $model->load(Yii::$app->request->post()) ) {
+
+            $document = serialize($_POST['Project']['document']);
+
 
             $getP = Project::find()->orderBy(['_id' => SORT_DESC])->limit(1)->one();
 
@@ -90,12 +95,10 @@ class OfflineController extends Controller
                     'tax' => $_POST['CompanyOffline']['gst'],
                     'term' => $_POST['CompanyOffline']['term'],
                     'status' => 'Quotation Uploaded',
-                    'quotation' => $_POST['Project']['sellers']['quotation'],
                     'direct_purchase' => [
-                        'company_id' => $_POST['Project']['direct_purchase']['company_id'],
-                        'filename' => $_POST['Project']['direct_purchase']['filename'],
-                        'path' => $_POST['Project']['direct_purchase']['path'],
-                        'enter_by' => $_POST['Project']['direct_purchase']['enter_by'],
+
+                        unserialize($document)
+
 
                     ],
                     'purchase_requisition_no' => '',
@@ -109,7 +112,7 @@ class OfflineController extends Controller
                 $model->enter_by = Yii::$app->user->identity->id;
 
                 $model3->save() && $model->save();
-                Uploads::deleteAll(['id'=>$_POST['Project']['direct_purchase']['id']]);
+                Uploads::deleteAll(['enter_by'=> Yii::$app->user->identity->id,'date_create'=>$today]);
 
             Yii::$app->getSession()->setFlash('direct', 'Your Direct Purchase Has Been Submit');
             return $this->redirect(['source/index']);
@@ -138,6 +141,15 @@ class OfflineController extends Controller
 
         $company = Company::find()->where(['_id'=>$returnCompanyBuyer->company])->one();
 
+        $date_today = date('Ymd');
+
+        $uploader = User::find()->where(['id'=>(int)Yii::$app->user->identity->id])->one();
+
+
+        $path_to_user_dir = Yii::getAlias('@webroot/offline/'.$company->_id.'/direct-purchase'.'/'.$date_today.'/'.$uploader->account_name);
+
+        $count = count(glob("$path_to_user_dir/*"));
+
         if (Yii::$app->request->isPost) {
 
             if (!file_exists(Yii::getAlias('@webroot/offline/'.$company->_id))) {
@@ -148,15 +160,28 @@ class OfflineController extends Controller
 
             if ($model->validate()) {   
 
-                if (!file_exists(Yii::getAlias('@webroot/offline/'.$company->_id.'/direct_purchase'))) {
-                    mkdir(Yii::getAlias('@webroot/offline/'.$company->_id.'/direct_purchase'), 0777, true);
+                $i = 0;
+                if ($count == 0) {
+
+                    $count++;
+
+                } else {
+
+                    $count++;
+
                 }
 
-                $model->file->saveAs(Yii::getAlias('@webroot/offline/'.$company->_id).'/'.'direct_purchase/'.$model->file->baseName . '.' . $model->file->extension);
+
+                if (!file_exists(Yii::getAlias('@webroot/offline/'.$company->_id.'/direct-purchase'.'/'.$date_today.'/'.$uploader->account_name))) {
+                    mkdir(Yii::getAlias('@webroot/offline/'.$company->_id.'/direct-purchase'.'/'.$date_today.'/'.$uploader->account_name), 0777, true);
+                }
+
+$model->file->saveAs(Yii::getAlias('@webroot/offline/'.$company->_id).'/'.'direct-purchase/'.$date_today.'/'.$uploader->account_name.'/'.$count.'-'.$date_today.'.'.$model->file->extension);
 
 
-                $model2->filename = $model->file->baseName.'.'.$model->file->extension;
-                $model2->path = '/direct_purchase'.'/'.$model->file->baseName.'.'.$model->file->extension;
+                $model2->filename = $count.'-'.$date_today.'.'.$model->file->extension;
+                $model2->extension = $model->file->extension;
+                $model2->path = '/direct-purchase'.'/'.$date_today.'/'.$uploader->account_name.'/';
                 $model2->company_id = (string)$company->_id;
                 $model2->enter_by = Yii::$app->user->identity->id;
                 $model2->date_create = date('Y-m-d H:i:s');
@@ -204,6 +229,41 @@ class OfflineController extends Controller
     }
 
 
+    public function actionView($id,$filename)
+    {
+        $model2 = Uploads::find()->where([
+                'id'=>$id,
+                'filename' => $filename
+            ]
+        )
+        ->one();
+        echo $model2->filename;
+    }
 
+
+    public function actionDelete($id,$filename,$path,$company_id)
+    {
+
+        $file = $company_id.$path.$filename;
+        $data = Yii::getAlias('@webroot/offline/'.$file);
+        unlink($data);
+        $this->findModel($id)->delete();
+
+
+
+        return $this->redirect(['offline/index']);
+    }
+
+
+
+
+    protected function findModel($id)
+    {
+        if (($model = Uploads::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
 	
 }
