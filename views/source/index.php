@@ -204,7 +204,7 @@ $this->registerJs($script);
             <div class="actions">
                 <div class="btn-group btn-group-devided" >
 
-                    <?= Html::a('Direct Purchase', ['offline/index'],['target' => '_blank','class'=>'btn green-jungle btn-outline btn-sm','title'=>'Direct Purchase']) ?>
+                    <?= Html::a('Direct Purchase', ['offline/index'],['class'=>'btn green-jungle btn-outline btn-sm','title'=>'Direct Purchase']) ?>
                     <?= Html::a('Guide Buying <i class="fa fa-shopping-cart"></i>', ['shop/index'],['target' => '_blank','class'=>'btn red-sunglo btn-outline btn-sm','title'=>'Go Guide Buying','disabled' =>'disabled']) ?>
                     <?= Html::a('Request Quote <i class="fa fa-book"></i>',FALSE, ['value'=>Url::to(['project/create']),'class' => 'btn blue-steel btn-outline btn-sm rfq','id'=>'','title'=>'Post RFQ','disabled' =>'disabled']) ?>
                     <?= Html::a('MySpot Buy <i class="fa fa-search"></i>', ['project/spot'],['target' => '_blank','class'=>'btn yellow-casablanca btn-outline btn-sm','title'=>'MySpot Buy','disabled' =>'disabled']) ?>

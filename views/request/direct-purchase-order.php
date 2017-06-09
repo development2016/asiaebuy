@@ -347,18 +347,25 @@ $amount = $sumAmount = $install = $showInstall = $sumInstall = $shipping = $show
                 <div class="row">
                     <div class="col-xs-12">
 
+                    <?php if ($getUser->account_name == $list[0]['sellers'][0]['PO_process_by']) { ?>
 
-                        <?php pri
+                            <?= Html::a('<span class="ladda-label">Submit PO</span>', [
+                            'generate/generate-direct-purchase-order',
+                            'seller'=>$seller,
+                            'project'=> (string)$project,
+                            'buyer' => $buyer
+                            ], [
+                            'class' => 'btn btn-lg blue hidden-print uppercase print-btn mt-ladda-btn ladda-button',
+                            'data-style' => 'slide-up'
+                            ]) ?>
+                        
+                    <?php } else { ?>
 
-                        <?= Html::a('<span class="ladda-label">Submit PO</span>', [
-                        'generate/generate-direct-purchase-order',
-                        'seller'=>$seller,
-                        'project'=> (string)$project,
-                        'buyer' => $buyer
-                        ], [
-                        'class' => 'btn btn-lg blue hidden-print uppercase print-btn mt-ladda-btn ladda-button',
-                        'data-style' => 'slide-up'
-                        ]) ?>
+                    <?php } ?>
+
+
+
+
 
 
                     </div>

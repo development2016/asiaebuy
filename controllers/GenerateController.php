@@ -471,6 +471,7 @@ class GenerateController extends Controller
                             'sellers.$.status' => 'Request Approval',
                             'sellers.$.approval.0.status' => 'Waiting Approval',
                             'sellers.$.approver_level' => $model[0]['sellers']['approval'][0]['approval'],
+                            'sellers.$.temp_status' => '',
                             'sellers.$.warehouses' => [[
                                 'person_in_charge' => $buyer_id->username,
                                 'contact' => $company[0]['telephone_no'],
@@ -510,6 +511,7 @@ class GenerateController extends Controller
                             'update_by' => Yii::$app->user->identity->id,
                             'sellers.$.approve_by' => '',
                             'sellers.$.status' => 'Request Approval',
+                            'sellers.$.temp_status' => '',
                             'sellers.$.warehouses' => [[
                                 'person_in_charge' => $buyer_id->username,
                                 'contact' => $company[0]['telephone_no'],
@@ -539,6 +541,7 @@ class GenerateController extends Controller
                             'update_by' => Yii::$app->user->identity->id,
                             'sellers.$.status' => 'Request Approval',
                             'sellers.$.approve_by' => '',
+                            'sellers.$.temp_status' => '',
                             'sellers.$.warehouses' => [[
                                 'person_in_charge' => $buyer_id->username,
                                 'contact' => $company[0]['telephone_no'],
@@ -577,6 +580,7 @@ class GenerateController extends Controller
                             'sellers.$.status' => 'Request Approval',
                             'sellers.$.approval.0.status' => 'Waiting Approval',
                             'sellers.$.approver_level' => $model[0]['sellers']['approval'][0]['approval'],
+                            'sellers.$.temp_status' => '',
 
 
                         ]
@@ -605,6 +609,7 @@ class GenerateController extends Controller
                             'update_by' => Yii::$app->user->identity->id,
                             'sellers.$.approve_by' => '',
                             'sellers.$.status' => 'Request Approval',
+                            'sellers.$.temp_status' => '',
 
 
                         ]
@@ -623,6 +628,7 @@ class GenerateController extends Controller
                             'update_by' => Yii::$app->user->identity->id,
                             'sellers.$.status' => 'Request Approval',
                             'sellers.$.approve_by' => '',
+                            'sellers.$.temp_status' => '',
 
 
                         ]
@@ -673,6 +679,7 @@ class GenerateController extends Controller
                 'date_update' => date('Y-m-d h:i:s'),
                 'update_by' => Yii::$app->user->identity->id,
                 'sellers.$.status' => 'Complete',
+                'sellers.$.temp_status' => '',
                 'buyers' => [
                     ['buyer' => $buyer]
                 ]

@@ -56,6 +56,12 @@ class RequestController extends Controller
         $info_role_2 = in_array_r('User', $getRole) ? 'Found' : 'Not Found';
 
 
+       /* echo $info_role;
+        echo "<br>";
+        echo $info_role_2;
+        exit(); */
+
+
         $collection = Yii::$app->mongo->getCollection('project');
 
 
@@ -127,6 +133,7 @@ class RequestController extends Controller
                             'temp_status' => '$sellers.temp_status',
                             'approve_by' => '$sellers.approve_by',
                             'approver_level' => '$sellers.approver_level',
+                            'PO_process_by' => '$sellers.PO_process_by',
                             
                         ],
                         
@@ -1562,6 +1569,10 @@ class RequestController extends Controller
 
     public function actionDirectPurchaseOrder($project,$buyer,$seller)
     {
+
+        $getUser = User::find()->where(['id'=>Yii::$app->user->identity->id])->one();
+
+
         $newProject_id = new \MongoDB\BSON\ObjectID($project);
 
         $buyer_info = User::find()->where(['account_name'=>$buyer])->one();
@@ -1690,7 +1701,7 @@ class RequestController extends Controller
                 'sellers.$.purchase_order_no' => $purchase_order_no,
                 'sellers.$.date_purchase_order' => date('Y-m-d H:i:s'),
                 'sellers.$.status' => 'PO In Progress',
-                'sellers.$.PO_process_by' => $buyer,
+                'sellers.$.PO_process_by' => $buyer_info->account_name,
 
             ]
         
@@ -1760,6 +1771,7 @@ class RequestController extends Controller
             'companyBuyer' => $companyBuyer,
             'seller' => $seller,
             'project' => $project,
+            'getUser' => $getUser,
             'buyer'=> $buyer
         ]);
 

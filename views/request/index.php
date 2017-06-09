@@ -251,6 +251,7 @@ $this->registerJs($script);
                                                             <?php if ($value2['approver'] == 'level') { ?>
 
                                                                  <th class="uppercase">Approval / Status</th>
+                                                                 <th class="uppercase">Status</th>
                                                                 
                                                             <?php } else { ?>
 
@@ -300,6 +301,11 @@ $this->registerJs($script);
                                                                     
                                                                 <?php } else { ?>
 
+
+
+
+
+
                                                                 <?php } ?>
 
                                                                     
@@ -309,6 +315,44 @@ $this->registerJs($script);
                                                             </ul>
 
                                                         </td>
+                                                        <td>
+
+                                                                <?php if ($value2['status'] == 'Approve') { ?>
+                                                                
+                                                                    <label class="label bg-green-jungle font-dark"><?php echo $value2['status']; ?></label>
+
+                                                                <?php } else { ?>
+
+
+                                                                    <?php if (!empty($value2['PO_process_by'])) { ?>
+
+                                                                        <?php if ($user->account_name == $value2['PO_process_by']) { ?>
+
+                                                                            <?php echo $value2['status']; ?>
+                                                                           
+                                                                        <?php } else { ?>
+
+                                                                            <?php echo $value2['status']; ?>
+                                                                            <br>
+                                                                            Process By : <span class="label bg-yellow-saffron font-dark"><?php echo $value2['PO_process_by']; ?></span>
+
+
+                                                                        <?php } ?>
+                                                                        
+                                                                    <?php } else { ?>
+
+                                                                        <?php echo $value2['status']; ?>
+
+                                                                    <?php } ?>
+
+                                                                     
+ 
+                                                                <?php } ?>
+
+                                                        </td>
+
+
+
 
                                                     <?php } else { ?>
 
@@ -329,7 +373,29 @@ $this->registerJs($script);
 
                                                                 <?php } else { ?>
 
-                                                                     <?php echo $value2['status']; ?>
+
+                                                                    <?php if (!empty($value2['PO_process_by'])) { ?>
+
+                                                                        <?php if ($user->account_name == $value2['PO_process_by']) { ?>
+
+                                                                            <?php echo $value2['status']; ?>
+                                                                           
+                                                                        <?php } else { ?>
+
+                                                                            <?php echo $value2['status']; ?>
+                                                                            <br>
+                                                                            Process By : <span class="label bg-yellow-saffron font-dark"><?php echo $value2['PO_process_by']; ?></span>
+
+
+                                                                        <?php } ?>
+                                                                        
+                                                                    <?php } else { ?>
+
+                                                                        <?php echo $value2['status']; ?>
+
+                                                                    <?php } ?>
+
+                                                                     
  
                                                                 <?php } ?>
 
@@ -377,7 +443,7 @@ $this->registerJs($script);
                                                                     <?= Html::a('Purchase Order', ['request/direct-purchase-order',
                                                                     'project'=>(string)$value['_id'],
                                                                     'seller'=>$value2['seller'],
-                                                                    'buyer'=>$value['buyers'][0]['buyer'],
+                                                                    'buyer'=>$value2['PO_process_by'],
                                                                     ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Order']) ?>
                                                                 </div>   
 
@@ -392,7 +458,7 @@ $this->registerJs($script);
                                                                         <ul class="dropdown-menu">
                                          
                                                                             <li>
-                                                                                <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/guide-purchase-requisition-html',
+                                                                                <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/direct-purchase-requisition-html',
                                                                                     'project'=>(string)$value['_id'],
                                                                                     'seller'=>$value2['seller'],
                                                                                     'buyer'=>$value['buyers'][0]['buyer'],
@@ -523,24 +589,81 @@ $this->registerJs($script);
                                                                 <!-- if user have role buyer can proceed to PO -->
                                                                 <?php if ($info_role == 'Found') { ?>
 
+                                                                    <!-- this if user have role buyer/user -->
                                                                     <?php if ($info_role_2 == 'Found') { ?>
 
-                                                                        <?php if ($value2['temp_status'] == 'Change Buyer') { ?>
-                                                                          
-                                                                        <?php } else { ?>
+                                                                    <?php if ($value2['temp_status'] == 'Change Buyer') { ?>
 
 
-                                                                           <div class="margin-bottom-5">
-                                                                            <?= Html::a('Submit To Buyer',FALSE, ['value'=>Url::to([
-                                                                            'request/choose-buyer',
+                                                                        <div class="margin-bottom-5">
+                                                                            <?= Html::a('Proceed To Purchase Order', ['request/direct-purchase-order',
                                                                             'project'=>(string)$value['_id'],
                                                                             'seller'=>$value2['seller'],
-                                                                            'buyer'=>$value['buyers'][0]['buyer'],
-                                                                            'role'=>'buyer'
-                                                           
-                                     
-                                                                            ]),'class' => 'btn blue btn-sm btn-outline choose-buyer','id'=>'choose-buyer','title'=>'Purchase Requisition']) ?>
-                                                                            </div>
+                                                                            'buyer'=>$user->account_name,
+                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Order']) ?>
+                                                                        </div>    
+
+
+
+
+                                                                    <?php } else { ?>
+
+
+                                                                                 <div class="margin-bottom-5">
+                                                                                <?= Html::a('Submit To Buyer',FALSE, ['value'=>Url::to([
+                                                                                'request/choose-buyer',
+                                                                                'project'=>(string)$value['_id'],
+                                                                                'seller'=>$value2['seller'],
+                                                                                'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                'role'=>'buyer'
+                                                               
+                                         
+                                                                                ]),'class' => 'btn blue btn-sm btn-outline choose-buyer','id'=>'choose-buyer','title'=>'Purchase Requisition']) ?>
+                                                                                </div>
+
+                                                                                <div class="margin-bottom-5">
+                                                                                    <?= Html::a('Proceed To Purchase Order', ['request/direct-purchase-order',
+                                                                                    'project'=>(string)$value['_id'],
+                                                                                    'seller'=>$value2['seller'],
+                                                                                    'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                    ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Order']) ?>
+                                                                                </div>   
+
+
+
+
+                                                                    <?php } ?>
+
+
+
+
+
+                                                                    <?php } else { ?>
+
+                                                                        <?php if ($value2['temp_status'] == 'Change Buyer') { ?>
+
+                                                                        <div class="margin-bottom-5">
+                                                                            <?= Html::a('Proceed To Purchase Order', ['request/direct-purchase-order',
+                                                                            'project'=>(string)$value['_id'],
+                                                                            'seller'=>$value2['seller'],
+                                                                            'buyer'=>$user->account_name,
+                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Order']) ?>
+                                                                        </div>    
+
+
+
+
+
+                                                                        <?php } else { ?>
+
+                                                                            <div class="margin-bottom-5">
+                                                                                <?= Html::a('Proceed To Purchase Order', ['request/direct-purchase-order',
+                                                                                'project'=>(string)$value['_id'],
+                                                                                'seller'=>$value2['seller'],
+                                                                                'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Order']) ?>
+                                                                            </div>   
+
 
 
                                                                         <?php } ?>
@@ -550,18 +673,15 @@ $this->registerJs($script);
 
 
 
-                                                             
+
+
                                                                     <?php } ?>
 
 
 
-                                                                    <div class="margin-bottom-5">
-                                                                        <?= Html::a('Proceed To Purchase Order', ['request/direct-purchase-order',
-                                                                        'project'=>(string)$value['_id'],
-                                                                        'seller'=>$value2['seller'],
-                                                                        'buyer'=>$value['buyers'][0]['buyer'],
-                                                                        ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Order']) ?>
-                                                                    </div>    
+
+
+
                                                          
                                                                 <?php } else { ?>
 
