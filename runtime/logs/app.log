@@ -16502,3 +16502,1925 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1496987574.057
     'REQUEST_TIME' => 1496987574
 ]
+2017-06-09 14:17:31 [::1][147][oredcgs5sej08sklgs42ed2660][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png".' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('metronic/assets...', Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-06-09 14:17:31 [::1][147][oredcgs5sej08sklgs42ed2660][info][application] $_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'oredcgs5sej08sklgs42ed2660'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/asiaebuy/web/'
+    '__id' => 147
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/datatables.min.css'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=oredcgs5sej08sklgs42ed2660; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64236'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496989051.07
+    'REQUEST_TIME' => 1496989051
+]
+2017-06-09 14:17:31 [::1][147][oredcgs5sej08sklgs42ed2660][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png".' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('metronic/assets...', Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-06-09 14:17:31 [::1][147][oredcgs5sej08sklgs42ed2660][info][application] $_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'oredcgs5sej08sklgs42ed2660'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/asiaebuy/web/'
+    '__id' => 147
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/datatables.min.css'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=oredcgs5sej08sklgs42ed2660; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64238'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496989051.156
+    'REQUEST_TIME' => 1496989051
+]
+2017-06-09 14:18:00 [::1][147][oredcgs5sej08sklgs42ed2660][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png".' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('metronic/assets...', Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-06-09 14:18:00 [::1][147][oredcgs5sej08sklgs42ed2660][info][application] $_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'oredcgs5sej08sklgs42ed2660'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'direct' => -1
+    ]
+    '__returnUrl' => '/asiaebuy/web/'
+    '__id' => 147
+    'direct' => 'Your Direct Purchase Has Been Submit'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/datatables.min.css'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=oredcgs5sej08sklgs42ed2660; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64251'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496989080.521
+    'REQUEST_TIME' => 1496989080
+]
+2017-06-09 14:18:00 [::1][147][oredcgs5sej08sklgs42ed2660][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png".' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('metronic/assets...', Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-06-09 14:18:00 [::1][147][oredcgs5sej08sklgs42ed2660][info][application] $_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'oredcgs5sej08sklgs42ed2660'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'direct' => -1
+    ]
+    '__returnUrl' => '/asiaebuy/web/'
+    '__id' => 147
+    'direct' => 'Your Direct Purchase Has Been Submit'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/datatables.min.css'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=oredcgs5sej08sklgs42ed2660; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64255'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496989080.588
+    'REQUEST_TIME' => 1496989080
+]
+2017-06-09 14:34:24 [::1][147][tpv7fbnk6knrh3jdtg65svthm4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png".' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('metronic/assets...', Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-06-09 14:34:24 [::1][147][tpv7fbnk6knrh3jdtg65svthm4][info][application] $_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/asiaebuy/web/'
+    '__id' => 147
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/datatables.min.css'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64505'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_both.png'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496990064.244
+    'REQUEST_TIME' => 1496990064
+]
+2017-06-09 14:34:24 [::1][147][tpv7fbnk6knrh3jdtg65svthm4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png".' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('metronic/assets...', Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-06-09 14:34:24 [::1][147][tpv7fbnk6knrh3jdtg65svthm4][info][application] $_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/asiaebuy/web/'
+    '__id' => 147
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/datatables.min.css'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64509'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/asiaebuy/web/metronic/assets/global/plugins/datatables/DataTables-1.10.12/images/sort_asc.png'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496990064.301
+    'REQUEST_TIME' => 1496990064
+]
+2017-06-09 14:39:12 [::1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\BulkWriteException' with message 'Too many positional (i.e. '$') elements found in path 'sellers.$.items.$'' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:241
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(241): MongoDB\Driver\Server->executeBulkWrite('asiaebuy.projec...', Object(MongoDB\Driver\BulkWrite), NULL)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#3 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1171): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#4 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'Too many positional (i.e. '$') elements found in path 'sellers.$.items.$'' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:246
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1171): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#3 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-06-09 14:39:12 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '2'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64531'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496990352.435
+    'REQUEST_TIME' => 1496990352
+]
+2017-06-09 14:45:05 [::1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\BulkWriteException' with message 'Too many positional (i.e. '$') elements found in path 'sellers.$.items.$'' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:241
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(241): MongoDB\Driver\Server->executeBulkWrite('asiaebuy.projec...', Object(MongoDB\Driver\BulkWrite), NULL)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#3 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1171): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#4 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'Too many positional (i.e. '$') elements found in path 'sellers.$.items.$'' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:246
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1171): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#3 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-06-09 14:45:05 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '0'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64766'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496990705.821
+    'REQUEST_TIME' => 1496990705
+]
+2017-06-09 14:46:15 [::1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\BulkWriteException' with message 'The update path 'sellers.$.items.' contains an empty field name, which is not allowed.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:241
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(241): MongoDB\Driver\Server->executeBulkWrite('asiaebuy.projec...', Object(MongoDB\Driver\BulkWrite), NULL)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#3 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1171): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#4 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'The update path 'sellers.$.items.' contains an empty field name, which is not allowed.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:246
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1171): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#3 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-06-09 14:46:15 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '0'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64770'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496990775.819
+    'REQUEST_TIME' => 1496990775
+]
+2017-06-09 14:47:46 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in C:\xampp\htdocs\asiaebuy\controllers\LeadController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\controllers\LeadController.php(486): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 486, Array)
+#1 [internal function]: app\controllers\LeadController->actionSaleQuotation('593a3d978726e34...', 'Possimo Sdn Bhd', 'huda@Buyer1000')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('sale-quotation', Array)
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('lead/sale-quota...', Array)
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-06-09 14:47:45 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'buyer' => 'huda@Buyer1000'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64776'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/lead/sale-quotation?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/lead/sale-quotation?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496990865.889
+    'REQUEST_TIME' => 1496990865
+]
+2017-06-09 14:47:55 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in C:\xampp\htdocs\asiaebuy\controllers\LeadController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\controllers\LeadController.php(486): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 486, Array)
+#1 [internal function]: app\controllers\LeadController->actionSaleQuotation('593a3d978726e34...', 'Possimo Sdn Bhd', 'huda@Buyer1000')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('sale-quotation', Array)
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('lead/sale-quota...', Array)
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-06-09 14:47:55 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'buyer' => 'huda@Buyer1000'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64777'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/lead/sale-quotation?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/lead/sale-quotation?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496990875.62
+    'REQUEST_TIME' => 1496990875
+]
+2017-06-09 14:49:12 [::1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\BulkWriteException' with message 'Modifiers operate on fields but we found type array instead. For example: {$mod: {<field>: ...}} not {$pull: [ "sellers.$.items.0" ]}' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:241
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(241): MongoDB\Driver\Server->executeBulkWrite('asiaebuy.projec...', Object(MongoDB\Driver\BulkWrite), NULL)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#3 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1171): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#4 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'Modifiers operate on fields but we found type array instead. For example: {$mod: {<field>: ...}} not {$pull: [ "sellers.$.items.0" ]}' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:246
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1171): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#3 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-06-09 14:49:12 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '0'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64789'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496990952.323
+    'REQUEST_TIME' => 1496990952
+]
+2017-06-09 14:50:20 [::1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\BulkWriteException' with message 'The update path 'sellers.$.items.' contains an empty field name, which is not allowed.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:241
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(241): MongoDB\Driver\Server->executeBulkWrite('asiaebuy.projec...', Object(MongoDB\Driver\BulkWrite), NULL)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#3 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1173): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#4 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'The update path 'sellers.$.items.' contains an empty field name, which is not allowed.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:246
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1173): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#3 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-06-09 14:50:20 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '0'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64827'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496991020.596
+    'REQUEST_TIME' => 1496991020
+]
+2017-06-09 14:53:34 [::1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\BulkWriteException' with message 'Too many positional (i.e. '$') elements found in path 'sellers.$.items.$'' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:241
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(241): MongoDB\Driver\Server->executeBulkWrite('asiaebuy.projec...', Object(MongoDB\Driver\BulkWrite), NULL)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#3 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1173): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#4 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'Too many positional (i.e. '$') elements found in path 'sellers.$.items.$'' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:246
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1173): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#3 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-06-09 14:53:34 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '0'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64851'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496991214.174
+    'REQUEST_TIME' => 1496991214
+]
+2017-06-09 14:56:39 [::1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\BulkWriteException' with message 'The update path 'sellers.$.items.$.' contains an empty field name, which is not allowed.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:241
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(241): MongoDB\Driver\Server->executeBulkWrite('asiaebuy.projec...', Object(MongoDB\Driver\BulkWrite), NULL)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#3 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1173): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#4 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'The update path 'sellers.$.items.$.' contains an empty field name, which is not allowed.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:246
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1173): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#3 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-06-09 14:56:39 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '0'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '64939'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496991399.607
+    'REQUEST_TIME' => 1496991399
+]
+2017-06-09 15:08:47 [::1][-][-][error][yii\mongodb\Exception] exception 'MongoDB\Driver\Exception\BulkWriteException' with message 'The update path 'sellers.$.items.' contains an empty field name, which is not allowed.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:241
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(241): MongoDB\Driver\Server->executeBulkWrite('asiaebuy.projec...', Object(MongoDB\Driver\BulkWrite), NULL)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#3 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1175): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#4 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next exception 'yii\mongodb\Exception' with message 'The update path 'sellers.$.items.' contains an empty field name, which is not allowed.' in C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php:246
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Command.php(552): yii\mongodb\Command->executeBatch('<span class="st...', '[]')
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2-mongodb\Collection.php(289): yii\mongodb\Command->update('<span class="st...', '[<span class="s...', '[<span class="s...', '[]')
+#2 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1175): yii\mongodb\Collection->update('[<span class="s...', '[<span class="s...')
+#3 [internal function]: app\controllers\InformationController->actionSaleRemove('<span class="st...', '<span class="st...', '<span class="st...', '<span class="st...', '...')
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-06-09 15:08:47 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '0'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '65083'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=0&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496992127.777
+    'REQUEST_TIME' => 1496992127
+]
+2017-06-09 15:14:44 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: item_id' in C:\xampp\htdocs\asiaebuy\controllers\InformationController.php:1166
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1166): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1166, Array)
+#1 [internal function]: app\controllers\InformationController->actionSaleRemove('Possimo Sdn Bhd', '593a3d978726e34...', 'direct', '2', 'normal')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('sale-remove', Array)
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('information/sal...', Array)
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-06-09 15:14:44 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '2'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '65147'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496992484.175
+    'REQUEST_TIME' => 1496992484
+]
+2017-06-09 15:15:00 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: item_id' in C:\xampp\htdocs\asiaebuy\controllers\InformationController.php:1166
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\controllers\InformationController.php(1166): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1166, Array)
+#1 [internal function]: app\controllers\InformationController->actionSaleRemove('Possimo Sdn Bhd', '593a3d978726e34...', 'direct', '2', 'normal')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('sale-remove', Array)
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('information/sal...', Array)
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-06-09 15:15:00 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'arrayItem' => '2'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '65151'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/information/sale-remove?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&arrayItem=2&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496992500.878
+    'REQUEST_TIME' => 1496992500
+]
+2017-06-09 15:17:18 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: no' in C:\xampp\htdocs\asiaebuy\views\source\direct-purchase-requisition.php:455
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\views\source\direct-purchase-requisition.php(455): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 455, Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(330): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SourceController))
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('direct-purchase...', Array, Object(app\controllers\SourceController))
+#5 C:\xampp\htdocs\asiaebuy\controllers\SourceController.php(1111): yii\base\Controller->render('direct-purchase...', Array)
+#6 [internal function]: app\controllers\SourceController->actionDirectPurchaseRequisition('593a3d978726e34...', 'huda@Buyer1000', 'Possimo Sdn Bhd', 'normal')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('direct-purchase...', Array)
+#10 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('source/direct-p...', Array)
+#11 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-06-09 15:17:18 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'buyer' => 'huda@Buyer1000'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '65173'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496992638.552
+    'REQUEST_TIME' => 1496992638
+]
+2017-06-09 15:23:45 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: items' in C:\xampp\htdocs\asiaebuy\views\source\direct-purchase-requisition.php:251
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\views\source\direct-purchase-requisition.php(251): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 251, Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(330): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SourceController))
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('direct-purchase...', Array, Object(app\controllers\SourceController))
+#5 C:\xampp\htdocs\asiaebuy\controllers\SourceController.php(1111): yii\base\Controller->render('direct-purchase...', Array)
+#6 [internal function]: app\controllers\SourceController->actionDirectPurchaseRequisition('593a3d978726e34...', 'huda@Buyer1000', 'Possimo Sdn Bhd', 'normal')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('direct-purchase...', Array)
+#10 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('source/direct-p...', Array)
+#11 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-06-09 15:23:45 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'buyer' => 'huda@Buyer1000'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '65254'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496993025.69
+    'REQUEST_TIME' => 1496993025
+]
+2017-06-09 15:23:47 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: items' in C:\xampp\htdocs\asiaebuy\views\source\direct-purchase-requisition.php:251
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\views\source\direct-purchase-requisition.php(251): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 251, Array)
+#1 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(330): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SourceController))
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('direct-purchase...', Array, Object(app\controllers\SourceController))
+#5 C:\xampp\htdocs\asiaebuy\controllers\SourceController.php(1111): yii\base\Controller->render('direct-purchase...', Array)
+#6 [internal function]: app\controllers\SourceController->actionDirectPurchaseRequisition('593a3d978726e34...', 'huda@Buyer1000', 'Possimo Sdn Bhd', 'normal')
+#7 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('direct-purchase...', Array)
+#10 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('source/direct-p...', Array)
+#11 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-06-09 15:23:47 [::1][-][-][info][application] $_GET = [
+    'project' => '593a3d978726e34074002892'
+    'seller' => 'Possimo Sdn Bhd'
+    'buyer' => 'huda@Buyer1000'
+    'approver' => 'normal'
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '65255'
+    'REDIRECT_QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496993027.563
+    'REQUEST_TIME' => 1496993027
+]
+2017-06-09 15:25:11 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: up' in C:\xampp\htdocs\asiaebuy\controllers\SourceController.php:1528
+Stack trace:
+#0 C:\xampp\htdocs\asiaebuy\controllers\SourceController.php(1528): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1528, Array)
+#1 [internal function]: app\controllers\SourceController->actionItem('Possimo Sdn Bhd', '593a3d978726e34...', 'direct', 'normal')
+#2 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('item', Array)
+#5 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('source/item', Array)
+#6 C:\xampp\htdocs\asiaebuy\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\asiaebuy\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-06-09 15:25:11 [::1][-][-][info][application] $_GET = [
+    'seller' => 'Possimo Sdn Bhd'
+    'project' => '593a3d978726e34074002892'
+    'path' => 'direct'
+    'approver' => 'normal'
+]
+
+$_POST = [
+    '_csrf' => '4xlmfFxHzsbHGdBBC-H39xBG_CAdnU2jbAbMs_v6Jp1bUFDXu6d8IgSJmwkZISsasCy6ZEAx6nlVA1NufO3z1Q=='
+    'Project' => [
+        'sellers' => [
+            'items' => [
+                'item_name' => 'Air Teh'
+                'brand' => 'Yeos'
+                'model' => 'Botol'
+                'description' => 'Chrysanthemum'
+                'specification' => 'Chrysanthemum'
+                'lead_time' => '2'
+                'validity' => '1'
+                'cost' => '1.20'
+                'quantity' => '10000'
+                'install' => ''
+                'installation_price' => ''
+                'shipping' => ''
+                'shipping_price' => ''
+            ]
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'em_cdn_uid' => 't=1496713108947&u=f8ba2056b81d4063a0d5927ce087ec8d'
+    '_csrf' => '907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"¸I6«çà²äÃKHÀÜí jFD]¬§Ú9ŸÝ‡ÕH\";}'
+    'PHPSESSID' => 'tpv7fbnk6knrh3jdtg65svthm4'
+    '_identity' => '358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[147,\"\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '777'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/asiaebuy/web/source/direct-purchase-requisition?project=593a3d978726e34074002892&seller=Possimo+Sdn+Bhd&buyer=huda%40Buyer1000&approver=normal'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'em_cdn_uid=t%3D1496713108947%26u%3Df8ba2056b81d4063a0d5927ce087ec8d; _csrf=907d283e27cc133a66617b5abf00a14fe0d840582cfbec4dfd930c070d5a65e7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%B8I6%AB%E7%E0%B2%E4%C3%90KH%12%C0%DC%ED%A0jFD%5D%AC%A7%DA9%05%9F%DD%87%17%D5H%22%3B%7D; PHPSESSID=tpv7fbnk6knrh3jdtg65svthm4; _identity=358abe76cc651509c9bf9c1d5bd7279b0d1855a8932b0bdb33cec21e32cbec62a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B147%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Go\\bin;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\fuad\\AppData\\Local\\Programs\\Python\\Python35-32\\;C:\\Users\\fuad\\bin\\Sencha\\Cmd;C:\\Users\\fuad\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\fuad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\fuad\\AppData\\Roaming\\npm;C:\\Program Files\\MongoDB\\Server\\3.4\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/asiaebuy/web/index.php'
+    'REMOTE_PORT' => '65277'
+    'REDIRECT_QUERY_STRING' => 'seller=Possimo+Sdn+Bhd&project=593a3d978726e34074002892&path=direct&approver=normal'
+    'REDIRECT_URL' => 'http://localhost/asiaebuy/web/source/item?seller=Possimo+Sdn+Bhd&project=593a3d978726e34074002892&path=direct&approver=normal'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'seller=Possimo+Sdn+Bhd&project=593a3d978726e34074002892&path=direct&approver=normal'
+    'REQUEST_URI' => '/asiaebuy/web/source/item?seller=Possimo+Sdn+Bhd&project=593a3d978726e34074002892&path=direct&approver=normal'
+    'SCRIPT_NAME' => '/asiaebuy/web/index.php'
+    'PHP_SELF' => '/asiaebuy/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1496993111.73
+    'REQUEST_TIME' => 1496993111
+]

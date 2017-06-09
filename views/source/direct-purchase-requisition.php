@@ -452,9 +452,9 @@ $amount = $sumAmount = $install = $showInstall = $sumInstall = $shipping = $show
                                                 'project'=>(string)$list[0]['_id'],
                                                 'seller'=>$list[0]['sellers'][0]['seller'],
                                                 //'item_id'=>$value['item_id'],
-                                                'arrayItem' => $arrayItem,
+                                                'arrayItem' => $value['item_id'],
                                                 'path' => 'direct',
-                                                 'approver' => $approver
+                                                'approver' => $approver
                                                 ], ['class' => 'btn red btn-outline','title'=>'Remove']) ?>
 
                                             </div>

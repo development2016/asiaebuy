@@ -1157,9 +1157,13 @@ class InformationController extends Controller
         ]); 
 
 
+
         $arrUpdate = [
             '$pull' => [
-                'sellers.$.items.$' =>  (int)$arrayItem
+                'sellers.$.items' => [
+                    'item_id' => (int)$arrayItem
+
+                ]
 
                /* [
                     'item_id' => (int)$item_id
@@ -1180,7 +1184,7 @@ class InformationController extends Controller
         } else if ($path == 'direct') {
 
 
-            return $this->redirect(['lead/sale-quotation', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
+            return $this->redirect(['source/direct-purchase-requisition', 'project' =>(string)$newProject_id,'seller'=>$seller,'buyer' => $data[0]['buyers'][0]['buyer'],'approver'=>$approver]);
         }
 
 

@@ -1163,6 +1163,7 @@ class SourceController extends Controller
         $countitem = count($items); // this to count how many items for specific sellers */
 
 
+
         if ($model->load(Yii::$app->request->post())) {
 
             if ($countitem == 0) {
@@ -1175,6 +1176,7 @@ class SourceController extends Controller
                         '$set' => [
                             'sellers.$.items' => [
                                 [
+                                    'item_id' => 0,
                                     'item_name' => $_POST['Project']['sellers']['items']['item_name'],
                                     'brand' => $_POST['Project']['sellers']['items']['brand'],
                                     'model' => $_POST['Project']['sellers']['items']['model'],
@@ -1221,7 +1223,7 @@ class SourceController extends Controller
                         '$set' => [
                             'sellers.$.items' => [
                                 [
-
+                                    'item_id' => 0,
                                     'item_name' => $_POST['Project']['sellers']['items']['item_name'],
                                     'brand' => $_POST['Project']['sellers']['items']['brand'],
                                     'model' => $_POST['Project']['sellers']['items']['model'],
@@ -1269,7 +1271,7 @@ class SourceController extends Controller
                         '$set' => [
                             'sellers.$.items' => [
                                 [
-
+                                    'item_id' => 0,
                                     'item_name' => $_POST['Project']['sellers']['items']['item_name'],
                                     'brand' => $_POST['Project']['sellers']['items']['brand'],
                                     'model' => $_POST['Project']['sellers']['items']['model'],
@@ -1318,7 +1320,7 @@ class SourceController extends Controller
                         '$set' => [
                             'sellers.$.items' => [
                                 [
-           
+                                    'item_id' => 0,
                                     'item_name' => $_POST['Project']['sellers']['items']['item_name'],
                                     'brand' => $_POST['Project']['sellers']['items']['brand'],
                                     'model' => $_POST['Project']['sellers']['items']['model'],
@@ -1357,13 +1359,12 @@ class SourceController extends Controller
                     $offline->save();
 
 
-
-
-
-
                 }
 
             } else {
+
+                $up = $countitem++;
+            
 
                 if ($_POST['Project']['sellers']['items']['install'] == 'Yes' && $_POST['Project']['sellers']['items']['shipping'] == 'Yes') {
 
@@ -1374,6 +1375,7 @@ class SourceController extends Controller
                             '$push' => [ // $push to add items in array 
                                 'sellers.$.items' => [
 
+                                    'item_id' => $up,
                                     'item_name' => $_POST['Project']['sellers']['items']['item_name'],
                                     'brand' => $_POST['Project']['sellers']['items']['brand'],
                                     'model' => $_POST['Project']['sellers']['items']['model'],
@@ -1420,6 +1422,7 @@ class SourceController extends Controller
                         [
                             '$push' => [ // $push to add items in array 
                                 'sellers.$.items' => [
+                                    'item_id' => $up,
                                     'item_name' => $_POST['Project']['sellers']['items']['item_name'],
                                     'brand' => $_POST['Project']['sellers']['items']['brand'],
                                     'model' => $_POST['Project']['sellers']['items']['model'],
@@ -1467,6 +1470,7 @@ class SourceController extends Controller
                         [
                             '$push' => [ // $push to add items in array 
                                 'sellers.$.items' => [
+                                    'item_id' => $up,
                                     'item_name' => $_POST['Project']['sellers']['items']['item_name'],
                                     'brand' => $_POST['Project']['sellers']['items']['brand'],
                                     'model' => $_POST['Project']['sellers']['items']['model'],
@@ -1516,6 +1520,7 @@ class SourceController extends Controller
                         [
                             '$push' => [ // $push to add items in array 
                                 'sellers.$.items' => [
+                                    'item_id' => $up,
                                     'item_name' => $_POST['Project']['sellers']['items']['item_name'],
                                     'brand' => $_POST['Project']['sellers']['items']['brand'],
                                     'model' => $_POST['Project']['sellers']['items']['model'],
