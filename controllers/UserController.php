@@ -256,6 +256,32 @@ class UserController extends Controller
 
 
 
+    public function actionUsername()
+    {
+
+
+        if (!empty($_POST["value"])) {
+
+
+            $company = User::find()->where(['username'=>$_POST['value']])->one();
+
+            if (empty($company)) {
+
+              
+            } else {
+
+    
+                echo '<span style="color:red;font-size:10px;">This Username Already Exist</span>';
+
+            }
+
+            
+
+        } else {
+
+
+        }
+    }
 
 
 

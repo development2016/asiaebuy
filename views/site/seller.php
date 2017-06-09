@@ -16,6 +16,116 @@ use app\models\LookupTerm;
 $this->title = 'Welcome To AsiaEBuy';
 $this->params['breadcrumbs'][] = $this->title;
 
+$script = <<< JS
+$(document).ready(function(){
+
+    var typingTimer;                //timer identifier
+    var doneTypingInterval = 1000;  //time in ms, 2 second for example  100 = 0.1 sec / 1000 = 1 sec
+
+
+    $('.company_name_to_search').on('keyup', function () {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    });
+
+
+    $('.company_name_to_search').on('keydown', function () {
+      clearTimeout(typingTimer);
+    });
+
+    function doneTyping () {
+        var inputVal = $('.company_name_to_search').val();
+
+        $.ajax({
+            type: 'POST',
+            url: 'company-name',
+            data: {value: inputVal},
+
+            success: function(data) {
+
+                $('.show-company').html(data);
+
+            }
+
+        })
+
+
+    }
+
+
+    var typingTimer2;                //timer identifier
+    var doneTypingInterval2 = 1000;  //time in ms, 2 second for example  100 = 0.1 sec / 1000 = 1 sec
+
+
+    $('.company_registeration_no_to_search').on('keyup', function () {
+      clearTimeout(typingTimer2);
+      typingTimer2 = setTimeout(doneTyping2, doneTypingInterval2);
+    });
+
+
+    $('.company_registeration_no_to_search').on('keydown', function () {
+      clearTimeout(typingTimer2);
+    });
+
+    function doneTyping2 () {
+        var inputVal2 = $('.company_registeration_no_to_search').val();
+
+        $.ajax({
+            type: 'POST',
+            url: 'registeration-no',
+            data: {value: inputVal2},
+
+            success: function(data) {
+
+                $('.show-registeration-no').html(data);
+
+            }
+
+        })
+
+
+    }
+
+    var typingTimer3;                //timer identifier
+    var doneTypingInterval3 = 1000;  //time in ms, 2 second for example  100 = 0.1 sec / 1000 = 1 sec
+
+
+    $('.username_to_search').on('keyup', function () {
+      clearTimeout(typingTimer3);
+      typingTimer3 = setTimeout(doneTyping3, doneTypingInterval3);
+    });
+
+
+    $('.username_to_search').on('keydown', function () {
+      clearTimeout(typingTimer3);
+    });
+
+    function doneTyping3 () {
+        var inputVal3 = $('.username_to_search').val();
+
+        $.ajax({
+            type: 'POST',
+            url: 'username',
+            data: {value: inputVal3},
+
+            success: function(data) {
+
+                $('.show-username').html(data);
+
+            }
+
+        })
+
+
+    }
+
+
+
+
+
+}); 
+JS;
+$this->registerJs($script);
 
 $country = ArrayHelper::map(LookupCountry::find()->asArray()->all(), 'id', 'country');
 $state = ArrayHelper::map(LookupState::find()->where(['country_id'=>$model2->country])->asArray()->all(), 'id', 'state');
@@ -60,7 +170,9 @@ $term = ArrayHelper::map(LookupTerm::find()->asArray()->all(), 'id', 'term');
                                     </span>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Company Name <small>(required)</small></label>
-                                        <input name="Company[company_name]" type="text" class="form-control">
+                                        <input name="Company[company_name]" type="text" id="company_name" style="text-transform: uppercase;"  class="form-control company_name_to_search">
+                                        <span class="show-company"></span>
+
 
                                     </div>
                                 </div>
@@ -68,7 +180,8 @@ $term = ArrayHelper::map(LookupTerm::find()->asArray()->all(), 'id', 'term');
                             <div class="col-sm-3">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Resgisteration No </label>
-                                    <input name="Company[company_registeration_no]" type="text" class="form-control">
+                                    <input name="Company[company_registeration_no]" type="text" id="company_registeration_no" class="form-control company_registeration_no_to_search">
+                                    <span class="show-registeration-no"></span>
 
                                 </div>
                             </div>
@@ -196,7 +309,8 @@ $term = ArrayHelper::map(LookupTerm::find()->asArray()->all(), 'id', 'term');
 
                                     <div class="form-group label-floating">
                                         <label class="control-label">Username <small>(required)</small></label>
-                                        <input name="User[username]" type="text" class="form-control">
+                                        <input name="User[username]" type="text" id="username_to_search"  class="form-control username_to_search">
+                                        <span class="show-username"></span>
 
                                     </div>
                                 </div>

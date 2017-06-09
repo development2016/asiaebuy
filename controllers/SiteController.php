@@ -53,7 +53,7 @@ class SiteController extends Controller
                 //'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['error','signup','login','request-password-reset','reset-password','state','register','seller','buyer','comming'],
+                        'actions' => ['error','signup','login','request-password-reset','reset-password','state','register','seller','buyer','comming','company-name','registeration-no','username'],
                         'allow' => true,
                     ],
                     [
@@ -378,16 +378,6 @@ class SiteController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
-
-
     public function actionState($id)
     {
         $countPosts = LookupState::find()
@@ -407,6 +397,87 @@ class SiteController extends Controller
                 echo "<option></option>";
         }
 
+    }
+
+    public function actionCompanyName()
+    {
+
+
+        if (!empty($_POST["value"])) {
+
+
+            $company = Company::find()->where(['company_name'=>strtoupper($_POST['value'])])->one();
+
+            if (empty($company)) {
+
+              
+            } else {
+
+    
+                echo '<span style="color:red;font-size:10px;">This Company Already Exist</span>';
+
+            }
+
+            
+
+        } else {
+
+
+        }
+    }
+
+    public function actionRegisterationNo()
+    {
+
+
+        if (!empty($_POST["value"])) {
+
+
+            $company = Company::find()->where(['company_registeration_no'=>$_POST['value']])->one();
+
+            if (empty($company)) {
+
+              
+            } else {
+
+    
+                echo '<span style="color:red;font-size:10px;">This Company Registeration No Already Exist</span>';
+
+            }
+
+            
+
+        } else {
+
+
+        }
+    }
+
+    public function actionUsername()
+    {
+
+
+        if (!empty($_POST["value"])) {
+
+
+            $company = User::find()->where(['username'=>$_POST['value']])->one();
+
+            if (empty($company)) {
+
+              
+            } else {
+
+    
+                echo '<span style="color:red;font-size:10px;">This Username Already Exist</span>';
+
+            }
+
+            
+
+        } else {
+
+
+        }
     }
 
 
