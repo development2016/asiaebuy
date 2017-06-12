@@ -239,59 +239,122 @@ $this->registerJs($script);
                                                     <td><?php echo $value2['seller'] ?></td>
                                                     <td><?php echo $value['buyers'][0]['buyer']; ?></td>
 
-                                                        <?php if ($value2['approver'] == 'level') { ?>
 
-                                                        <td>
-                                                            <ul>
-                                                            <?php foreach ($value2['approval'] as $key => $app) { ?>
-                                                                <li>
-                                                                <?= $app['approval']; ?>
 
-                                                                <?php if ($app['status'] == 'Waiting Approval') { ?>
+                                                    <?php if ($value2['status'] == 'Request Approval') { ?>
+                                                                <!-- START  LEVEL -->
+                                                                <?php if ($value2['approver'] == 'level') { ?>
 
-                                                                    : <label class="div-request-pulsate">Waiting To Approve</label>
+                                                                        <td>
+                                                                                <ul>
+                                                                                    <?php foreach ($value2['approval'] as $key => $app) { ?>
+                                                                                            <li>
+                                                                                            <?= $app['approval']; ?>
 
-                                                                <?php } elseif ($app['status'] == 'Approve') { ?>
+                                                                                            <?php if ($app['status'] == 'Waiting Approval') { ?>
 
-                                                                    : <label class="label bg-green-jungle font-dark"><?= $app['status']; ?></label>
-                                                                    
+                                                                                                : <label class="div-request-pulsate">Waiting To Approve</label>
+
+                                                                                            <?php } elseif ($app['status'] == 'Approve') { ?>
+
+                                                                                                : <label class="label bg-green-jungle font-dark"><?= $app['status']; ?></label>
+                                                                                                
+                                                                                            <?php } else { ?>
+
+                                                                                            <?php } ?>
+
+
+
+                                                                                            </li>
+                                                                                            <br>
+                                                                                    <?php } ?>
+                                                                                </ul>
+                                                                        </td>
+
+
+
+
                                                                 <?php } else { ?>
+
+                                                                        <td>
+                                                                            <?php if ($value2['status'] == 'Approve') { ?>
+                                                                            
+                                                                                <label class="label bg-green-jungle font-dark"><?php echo $value2['status']; ?></label>
+
+                                                                            <?php } else { ?>
+
+                                                                                 <?php echo $value2['status']; ?>
+
+                                                                            <?php } ?>
+
+                                                                       </td>
+
+                                                                <?php } ?>
+
+                                                     <?php } elseif ($value2['status'] == 'Request Approval Next') { ?>
+                                                                <!-- START  NEXT -->
+                                                                <?php if ($value2['approver_next'] == 'level') { ?>
+
+                                                                        <td>
+                                                                                <ul>
+                                                                                    <?php foreach ($value2['approval_next'] as $key_next => $app_next) { ?>
+                                                                                            <li>
+                                                                                            <?= $app_next['approval_next']; ?>
+
+                                                                                            <?php if ($app_next['status_next'] == 'Waiting Approval') { ?>
+
+                                                                                                : <label class="div-request-pulsate">Waiting To Approve</label>
+
+                                                                                            <?php } elseif ($app_next['status_next'] == 'Approve') { ?>
+
+                                                                                                : <label class="label bg-green-jungle font-dark"><?= $app_next['status_next']; ?></label>
+                                                                                                
+                                                                                            <?php } else { ?>
+
+                                                                                            <?php } ?>
+
+
+
+                                                                                            </li>
+                                                                                            <br>
+                                                                                    <?php } ?>
+                                                                                </ul>
+                                                                        </td>
+
+
+
+
+                                                                <?php } else { ?>
+
+                                                                        <td>
+                                                                            <?php if ($value2['status'] == 'Approve') { ?>
+                                                                            
+                                                                                <label class="label bg-green-jungle font-dark"><?php echo $value2['status']; ?></label>
+
+                                                                            <?php } else { ?>
+
+                                                                                 <?php echo $value2['status']; ?>
+
+                                                                            <?php } ?>
+
+                                                                       </td>
 
                                                                 <?php } ?>
 
 
 
-                                                                </li>
-                                                                <br>
-                                                            <?php } ?>
-                                                            </ul>
-                                                        </td>
 
 
 
-                                                        <?php } else { ?>
+                                                     <?php } ?>
 
-                                                            <td>
-                                                                <?php if ($value2['status'] == 'Approve') { ?>
-                                                                
-                                                                    <label class="label bg-green-jungle font-dark"><?php echo $value2['status']; ?></label>
-
-                                                                <?php } else { ?>
-
-                                                                     <?php echo $value2['status']; ?>
- 
-                                                                <?php } ?>
-
-                                                           </td>
-
-
-                                                        <?php } ?>
 
                                                     <td>
+                                                        <!-- START PR -->
 
                                                         <?php if ($value2['status'] == 'Approve') { ?>
 
-                                                            <?php if ($value['type_of_project'] == 'Guide Buying') { ?>
+                                                                <?php if ($value['type_of_project'] == 'Guide Buying') { ?>
 
                                                                     <div class="margin-bottom-5">
 
@@ -316,86 +379,79 @@ $this->registerJs($script);
                                                                     </div>
 
 
+                                                                <?php } elseif ($value['type_of_project'] == 'Sale Lead') { ?>
 
-                                                            <?php } elseif ($value['type_of_project'] == 'Sale Lead') { ?>
+                                                                <?php } elseif ($value['type_of_project'] == 'MySpot Buy') { ?>
 
-
-
-                                                            <?php } elseif ($value['type_of_project'] == 'MySpot Buy') { ?>
-
-
-
-                                                            <?php } elseif ($value['type_of_project'] == 'Direct Purchase') { ?>
+                                                                <?php } elseif ($value['type_of_project'] == 'Direct Purchase') { ?>
 
 
                                                                     <div class="margin-bottom-5">
 
-                                                                            <div class="btn-group">
-                                                                                <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Purchase Requisition
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </a>
-                                                                                <ul class="dropdown-menu">
-                                                                      
-                                                                                    <li>
-                                                                                        <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/direct-purchase-requisition-html',
-                                                                                            'project'=>(string)$value['_id'],
-                                                                                            'seller'=>$value2['seller'],
-                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
-                                                                                            ],['target'=>'_blank']) ?>
-                                                                                    </li>
+                                                                        <div class="btn-group">
+                                                                            <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Purchase Requisition
+                                                                                <i class="fa fa-angle-down"></i>
+                                                                            </a>
+                                                                            <ul class="dropdown-menu">
+                                                                  
+                                                                                <li>
+                                                                                    <?= Html::a('<b>'.$value2['purchase_requisition_no'].'</b>', ['html/direct-purchase-requisition-html',
+                                                                                        'project'=>(string)$value['_id'],
+                                                                                        'seller'=>$value2['seller'],
+                                                                                        'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                        ],['target'=>'_blank']) ?>
+                                                                                </li>
 
-                                          
-                                                                                </ul>
-                                                                            </div>
+                                      
+                                                                            </ul>
+                                                                        </div>
 
                                                                     </div>
 
 
-
-
-                                                            <?php } ?>
-
-
+                                                                <?php } ?>
 
 
                                                         <?php } else { ?>
 
-                                                            <?php if ($value['type_of_project'] == 'Guide Buying') { ?>
+                                                                <?php if ($value['type_of_project'] == 'Guide Buying') { ?>
+
+                                                                        <?php if ($value2['approver'] == 'level') { ?>
+
+                                                                                <?php if ($user->account_name == $value2['approver_level']) { ?>
+                                                                                    
+                                                                                        <div class="margin-bottom-5">
+                                                                                            <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                            'approver' => $value2['approver'],
+                                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                                        </div>
+
+                                                                                <?php } else { ?>
+
+                                                                                <?php } ?>
+
+                                                                        <?php } else { ?>
 
 
-                                                            <?php if ($value2['approver'] == 'level') { ?>
+                                                                                    <div class="margin-bottom-5">
+                                                                                        <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
+                                                                                        'project'=>(string)$value['_id'],
+                                                                                        'seller'=>$value2['seller'],
+                                                                                        'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                        'approver' => $value2['approver'],
+                                                                                        ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                                    </div>
 
-                                                                <?php if ($user->account_name == $value2['approver_level']) { ?>
-                                                                    
-                                                                        <div class="margin-bottom-5">
-                                                                            <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
-                                                                            'project'=>(string)$value['_id'],
-                                                                            'seller'=>$value2['seller'],
-                                                                            'buyer'=>$value['buyers'][0]['buyer'],
-                                                                            'approver' => $value2['approver'],
-                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
-                                                                        </div>
-
-                                                                <?php } else { ?>
-
-                                                                <?php } ?>
-
-                                                            <?php } else { ?>
+                                                                        <?php } ?>
 
 
-                                                                        <div class="margin-bottom-5">
-                                                                            <?= Html::a('Purchase Requisition', ['request/guide-purchase-requisition-approve',
-                                                                            'project'=>(string)$value['_id'],
-                                                                            'seller'=>$value2['seller'],
-                                                                            'buyer'=>$value['buyers'][0]['buyer'],
-                                                                            'approver' => $value2['approver'],
-                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
-                                                                        </div>
-
-                                                            <?php } ?>
 
 
-                                                            <?php } elseif ($value['type_of_project'] == 'Sale Lead') { ?>
+
+                                                                <?php } elseif ($value['type_of_project'] == 'Sale Lead') { ?>
 
                                                                 <div class="margin-bottom-5">
                                                                     <?= Html::a('Purchase Requisition', ['request/sale-purchase-requisition-approve',
@@ -406,79 +462,136 @@ $this->registerJs($script);
                                                                 </div>
 
 
-                                                            <?php } elseif ($value['type_of_project'] == 'MySpot Buy') { ?>
+                                                                <?php } elseif ($value['type_of_project'] == 'MySpot Buy') { ?>
 
-                                                                <div class="margin-bottom-5">
-                                                                    <?= Html::a('Purchase Requisition', ['request/spot-purchase-requisition-approve',
-                                                                    'project'=>(string)$value['_id'],
-                                                                    'seller'=>$value2['seller'],
-                                                                    'buyer'=>$value['buyers'][0]['buyer'],
-                                                                    ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
-                                                                </div>
+                                                                    <div class="margin-bottom-5">
+                                                                        <?= Html::a('Purchase Requisition', ['request/spot-purchase-requisition-approve',
+                                                                        'project'=>(string)$value['_id'],
+                                                                        'seller'=>$value2['seller'],
+                                                                        'buyer'=>$value['buyers'][0]['buyer'],
+                                                                        ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                    </div>
 
-                                                            <?php } elseif ($value['type_of_project'] == 'Direct Purchase') { ?>
 
-                                                                <?php if ($value2['approver'] == 'level') { ?>
+                                                                <?php } elseif ($value['type_of_project'] == 'Direct Purchase') { ?>
 
-                                                                    <?php if ($user->account_name == $value2['approver_level']) { ?>
-                                                                        
-                                                                            <div class="margin-bottom-5">
-                                                                                <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
-                                                                                'project'=>(string)$value['_id'],
-                                                                                'seller'=>$value2['seller'],
-                                                                                'buyer'=>$value['buyers'][0]['buyer'],
-                                                                                'approver' => $value2['approver'],
-                                                                                ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
-                                                                            </div>
 
-                                                                    <?php } else { ?>
+                                                                    <?php if ($value2['status'] == 'Request Approval') { ?>
 
+
+                                                                            <?php if ($value2['approver'] == 'level') { ?>
+
+                                                                                    <?php if ($user->account_name == $value2['approver_level']) { ?>
+                                                                                        
+                                                                                        <div class="margin-bottom-5">
+                                                                                            <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                            'approver' => $value2['approver'],
+                                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                                        </div>
+
+                                                                                    <?php } else { ?>
+
+                                                                                    <?php } ?>
+
+                                                                            <?php } else { ?>
+
+
+                                                                                        <div class="margin-bottom-5">
+                                                                                            <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                            'approver' => $value2['approver'],
+                                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                                        </div>
+
+                                                                            <?php } ?>
+
+
+                                                                    <?php } elseif ($value2['status'] == 'Request Approval Next') { ?>
+
+                                                                            <?php if ($value2['approver_next'] == 'level') { ?>
+
+                                                                                    <?php if ($user->account_name == $value2['approver_level_next']) { ?>
+                                                                                        
+                                                                                        <div class="margin-bottom-5">
+                                                                                            <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve-next',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                            'approver_next' => $value2['approver_next'],
+                                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                                        </div>
+
+                                                                                    <?php } else { ?>
+
+                                                                                    <?php } ?>
+
+
+
+
+
+                                                                            <?php } else { ?>
+
+
+                                                                                        <div class="margin-bottom-5">
+                                                                                            <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve-next',
+                                                                                            'project'=>(string)$value['_id'],
+                                                                                            'seller'=>$value2['seller'],
+                                                                                            'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                            'approver_next' => $value2['approver_next'],
+                                                                                            ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
+                                                                                        </div>
+
+
+
+                                                                            <?php } ?>
+
+
+
+
+                                                                      
                                                                     <?php } ?>
 
-                                                                <?php } else { ?>
 
 
-                                                                            <div class="margin-bottom-5">
-                                                                                <?= Html::a('Purchase Requisition', ['request/direct-purchase-requisition-approve',
-                                                                                'project'=>(string)$value['_id'],
-                                                                                'seller'=>$value2['seller'],
-                                                                                'buyer'=>$value['buyers'][0]['buyer'],
-                                                                                'approver' => $value2['approver'],
-                                                                                ],['class'=>'btn blue btn-sm btn-outline','title'=>'Purchase Requisition']) ?>
-                                                                            </div>
+
+
+
+
 
                                                                 <?php } ?>
 
-
-
-                                                            <?php } ?>
-
-
-
-
-
                                                         <?php } ?>
+
+                                                        <!-- END BUTTON PR -->
+
+
+                                                        <!-- BUTTON QUOTATION  -->
 
                                                         <?php if ($value['type_of_project'] == 'Guide Buying') { ?>
 
                                                             <div class="margin-bottom-5">
 
-                                                                    <div class="btn-group">
-                                                                        <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
-                                                                            <i class="fa fa-angle-down"></i>
-                                                                        </a>
-                                                                        <ul class="dropdown-menu">
-                                                                            <li>
-                                                                                <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/guide-quotation-html',
-                                                                                    'project'=>(string)$value['_id'],
-                                                                                    'seller'=>$value2['seller'],
-                                                                                    'buyer'=>$value['buyers'][0]['buyer'],
-                                                                                    ],['target'=>'_blank']) ?>
-                                                                            </li>
+                                                                <div class="btn-group">
+                                                                    <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
+                                                                        <i class="fa fa-angle-down"></i>
+                                                                    </a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li>
+                                                                            <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/guide-quotation-html',
+                                                                                'project'=>(string)$value['_id'],
+                                                                                'seller'=>$value2['seller'],
+                                                                                'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                ],['target'=>'_blank']) ?>
+                                                                        </li>
 
-                                  
-                                                                        </ul>
-                                                                    </div>
+                              
+                                                                    </ul>
+                                                                </div>
 
                                                             </div>
 
@@ -486,22 +599,22 @@ $this->registerJs($script);
 
                                                             <div class="margin-bottom-5">
 
-                                                                    <div class="btn-group">
-                                                                        <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
-                                                                            <i class="fa fa-angle-down"></i>
-                                                                        </a>
-                                                                        <ul class="dropdown-menu">
-                                                                            <li>
-                                                                                <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/sale-quotation-html',
-                                                                                    'project'=>(string)$value['_id'],
-                                                                                    'seller'=>$value2['seller'],
-                                                                                    'buyer'=>$value['buyers'][0]['buyer'],
-                                                                                    ],['target'=>'_blank']) ?>
-                                                                            </li>
+                                                                <div class="btn-group">
+                                                                    <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
+                                                                        <i class="fa fa-angle-down"></i>
+                                                                    </a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li>
+                                                                            <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/sale-quotation-html',
+                                                                                'project'=>(string)$value['_id'],
+                                                                                'seller'=>$value2['seller'],
+                                                                                'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                ],['target'=>'_blank']) ?>
+                                                                        </li>
 
-                                  
-                                                                        </ul>
-                                                                    </div>
+                              
+                                                                    </ul>
+                                                                </div>
 
                                                             </div>
 
@@ -509,22 +622,22 @@ $this->registerJs($script);
 
                                                             <div class="margin-bottom-5">
 
-                                                                    <div class="btn-group">
-                                                                        <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
-                                                                            <i class="fa fa-angle-down"></i>
-                                                                        </a>
-                                                                        <ul class="dropdown-menu">
-                                                                            <li>
-                                                                                <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/spot-quotation-html',
-                                                                                    'project'=>(string)$value['_id'],
-                                                                                    'seller'=>$value2['seller'],
-                                                                                    'buyer'=>$value['buyers'][0]['buyer'],
-                                                                                    ],['target'=>'_blank']) ?>
-                                                                            </li>
+                                                                <div class="btn-group">
+                                                                    <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
+                                                                        <i class="fa fa-angle-down"></i>
+                                                                    </a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li>
+                                                                            <?= Html::a('<b>'.$value2['quotation_no'].'</b>', ['html/spot-quotation-html',
+                                                                                'project'=>(string)$value['_id'],
+                                                                                'seller'=>$value2['seller'],
+                                                                                'buyer'=>$value['buyers'][0]['buyer'],
+                                                                                ],['target'=>'_blank']) ?>
+                                                                        </li>
 
-                                  
-                                                                        </ul>
-                                                                    </div>
+                              
+                                                                    </ul>
+                                                                </div>
 
                                                             </div>
 
@@ -532,24 +645,21 @@ $this->registerJs($script);
 
                                                             <div class="margin-bottom-5">
 
-                                                                    <div class="btn-group">
-                                                                        <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
-                                                                            <i class="fa fa-angle-down"></i>
-                                                                        </a>
-                                                                        <ul class="dropdown-menu">
-                                      
+                                                                <div class="btn-group">
+                                                                    <a class="btn blue btn-sm btn-outline dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false"> Quotation
+                                                                        <i class="fa fa-angle-down"></i>
+                                                                    </a>
+                                                                    <ul class="dropdown-menu">
                                   
-                                                                        </ul>
-                                                                    </div>
+                              
+                                                                    </ul>
+                                                                </div>
 
                                                             </div>
 
-
-
-
-
-                                                            
                                                         <?php } ?>
+
+                                                        <!-- END BUTTON QUOTATION -->
 
                                                     </td>
                                                 </tr>
