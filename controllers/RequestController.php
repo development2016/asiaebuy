@@ -140,6 +140,7 @@ class RequestController extends Controller
                             'PO_process_by' => '$sellers.PO_process_by',
                             'approver_next' => '$sellers.approver_next',
                             'approval_next' => '$sellers.approval_next',
+                            'has_second_approval' => '$sellers.has_second_approval'
                             
                         ],
                         
@@ -2330,7 +2331,8 @@ class RequestController extends Controller
                             '$set' => [
                                 'sellers.$.approval_next.'.$getKey.'.status_next' => 'Approve',
                                 'sellers.$.status' => 'Approve',
-                                'sellers.$.approver_level_next' => ''
+                                'sellers.$.approver_level_next' => '',
+                                'sellers.$.has_second_approval' => 'Yes'
 
                             ]
                         
@@ -2528,6 +2530,7 @@ class RequestController extends Controller
                     'update_by' => Yii::$app->user->identity->id,
                     'sellers.$.status' => 'Approve',
                     'sellers.$.approve_by_next' => $approval_info->account_name,
+
 
                 ],
 

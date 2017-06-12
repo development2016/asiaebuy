@@ -253,7 +253,42 @@ $this->registerJs($script);
                                                     <th class="uppercase">Seller Name</th>
                                                     <?php foreach ($value['sellers'] as $key => $value2) { ?>
 
-                                                        <?php if ($value2['status'] == 'Pass PR to Buyer To Proceed PO') { ?>
+                                                        <?php if ($value2['status'] == 'Approve') { ?>
+                                                            <!-- this will check have second approval or not -->
+                                                            <?php if (empty($value2['has_second_approval'])) { ?>
+
+                                                                    <?php if ($value2['approver'] == 'level') { ?>
+
+                                                                         <th class="uppercase">Approval / Status</th>
+                                                                         <th class="uppercase">Status</th>
+                                                                        
+                                                                    <?php } else { ?>
+
+                                                                        <th class="uppercase">Approval</th>
+                                                                        <th class="uppercase">Status</th>
+
+                                                                    <?php } ?>
+
+
+                                                            <?php } else { ?>
+
+
+                                                                    <?php if ($value2['approver_next'] == 'level') { ?>
+
+                                                                         <th class="uppercase">Approval / Status</th>
+                                                                         <th class="uppercase">Status</th>
+                                                                        
+                                                                    <?php } else { ?>
+
+                                                                        <th class="uppercase">Approval</th>
+                                                                        <th class="uppercase">Status</th>
+
+                                                                    <?php } ?>
+
+                                                            <?php } ?>
+
+
+                                                        <?php } elseif ($value2['status'] == 'Pass PR to Buyer To Proceed PO') { ?>
 
                                                                 <th class="uppercase">Request From</th>
                                                                 <th class="uppercase">Buyer To Respond</th>
@@ -312,7 +347,113 @@ $this->registerJs($script);
 
 
                                                     <!-- ALL STATUS -->
-                                                    <?php if ($value2['status'] == 'Pass PR to Buyer To Proceed PO') { ?>
+                                                    <?php if ($value2['status'] == 'Approve') { ?>
+                                                        <!-- this will check have second approval or not -->
+                                                        <?php if (empty($value2['has_second_approval'])) { ?>
+
+                                                                <td>
+                                                                    <ul>
+                                                                    <?php foreach ($value2['approval'] as $key => $app) { ?>
+                                                                        <li><?= $app['approval']; ?></li>
+                                                                        <br>
+                                                                    <?php } ?>
+                                                                    </ul>
+
+                                                                </td>
+                                                                <td>
+
+                                                                        <?php if ($value2['status'] == 'Approve') { ?>
+                                                                        
+                                                                            <label class="label bg-green-jungle font-dark"><?php echo $value2['status']; ?></label>
+
+                                                                        <?php } else { ?>
+
+
+                                                                            <?php if (!empty($value2['PO_process_by'])) { ?>
+
+                                                                                <?php if ($user->account_name == $value2['PO_process_by']) { ?>
+
+                                                                                    <?php echo $value2['status']; ?>
+                                                                                   
+                                                                                <?php } else { ?>
+
+                                                                                    <?php echo $value2['status']; ?>
+                                                                                    <br>
+                                                                                    Process By : <span class="label bg-yellow-saffron font-dark"><?php echo $value2['PO_process_by']; ?></span>
+
+
+                                                                                <?php } ?>
+                                                                                
+                                                                            <?php } else { ?>
+
+                                                                                <?php echo $value2['status']; ?>
+
+                                                                            <?php } ?>
+
+                                                                             
+         
+                                                                        <?php } ?>
+
+                                                                </td>
+
+
+
+                                                        <?php } else { ?>
+
+                                                                <td>
+                                                                    <ul>
+                                                                    <?php foreach ($value2['approval_next'] as $key_next => $app_next) { ?>
+                                                                        <li><?= $app_next['approval_next']; ?></li>
+                                                                        <br>
+                                                                    <?php } ?>
+                                                                    </ul>
+
+                                                                </td>
+                                                                <td>
+
+                                                                        <?php if ($value2['status'] == 'Approve') { ?>
+                                                                        
+                                                                            <label class="label bg-green-jungle font-dark"><?php echo $value2['status']; ?></label>
+
+                                                                        <?php } else { ?>
+
+
+                                                                            <?php if (!empty($value2['PO_process_by'])) { ?>
+
+                                                                                <?php if ($user->account_name == $value2['PO_process_by']) { ?>
+
+                                                                                    <?php echo $value2['status']; ?>
+                                                                                   
+                                                                                <?php } else { ?>
+
+                                                                                    <?php echo $value2['status']; ?>
+                                                                                    <br>
+                                                                                    Process By : <span class="label bg-yellow-saffron font-dark"><?php echo $value2['PO_process_by']; ?></span>
+
+
+                                                                                <?php } ?>
+                                                                                
+                                                                            <?php } else { ?>
+
+                                                                                <?php echo $value2['status']; ?>
+
+                                                                            <?php } ?>
+
+                                                                             
+         
+                                                                        <?php } ?>
+
+                                                                </td>
+
+
+
+                                                        <?php } ?>
+
+
+
+
+
+                                                    <?php } elseif ($value2['status'] == 'Pass PR to Buyer To Proceed PO') { ?>
 
                                                         <td><?php echo $value['requester'] ?></td>
                                                         <td>
