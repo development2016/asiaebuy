@@ -222,7 +222,7 @@ $this->registerJs($script);
                                                 'visible' => User::checkMenu('3007'),
                                             ],
                                             [
-                                                'label' => '<i class="icon-puzzle"></i>Request', 
+                                                'label' => 'Approval', 
                                                 'url' => ['request/request'],
                                                 'template'=> '<a href="{url}" class="text-uppercase">{label}</a>',
                                                 'visible' => User::checkMenu('3008'),
