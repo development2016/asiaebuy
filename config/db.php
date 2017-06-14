@@ -17,7 +17,7 @@ return [
 
       
 	'class' => '\yii\mongodb\Connection',
-	'dsn' => 'mongodb://asiaebuy:Amtujpino.2017@aws-ap-southeast-1-portal.1.dblayer.com:15403/asiaebuy',
+    'dsn' => 'mongodb://asiaebuy:Amtujpino.2017@aws-ap-southeast-1-portal.2.dblayer.com:15429/asiaebuy'
 	'options' => [
 		'ssl' => true
 	],
